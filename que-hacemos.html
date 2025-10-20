@@ -9,60 +9,60 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
-<body style="background-color:#EDE2C9;color:#3C3C3C;font-family:'Open Sans',sans-serif;">
+<body>
 
-<header style="background-color:#EDE2C9;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;">
-  <div class="header-inner" style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
-      <img src="img/logo.jpg" alt="Fundación Legis" style="height:48px;width:auto;">
-    </a>
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
     <nav>
-      <ul id="main-menu" style="list-style:none;display:flex;gap:22px;margin:0;padding:0;">
-        <li><a href="index.html" style="text-decoration:none;color:#3C3C3C;">Inicio</a></li>
-        <li><a href="que-hacemos.html" class="active" style="text-decoration:none;color:#7B1E27;font-weight:700;">Qué hacemos</a></li>
-        <li><a href="quienes-somos.html" style="text-decoration:none;color:#3C3C3C;">Quiénes somos</a></li>
-        <li><a href="colabora.html" class="btn-colabora" style="background-color:#7B1E27;color:#EDE2C9;padding:6px 12px;border-radius:6px;text-decoration:none;font-weight:600;">Colabora</a></li>
+      <ul id="main-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a class="active" href="que-hacemos.html">Qué hacemos</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch" style="display:flex;gap:6px;">
-      <a href="#" style="color:#7B1E27;font-weight:700;text-decoration:none;">ES</a>
-      <span style="color:#7B1E27;">|</span>
-      <a href="what-we-do.html" style="color:#3C3C3C;text-decoration:none;">EN</a>
+    <div class="lang-switch">
+      <a class="active" href="#">ES</a><a href="what-we-do.html">EN</a>
     </div>
   </div>
 </header>
 
-<main style="max-width:1100px;margin:40px auto;padding:0 20px;">
-  <section style="text-align:center;margin-bottom:50px;">
-    <h1 style="color:#7B1E27;margin-bottom:15px;">Qué hacemos</h1>
-    <p style="font-size:1.1em;max-width:800px;margin:0 auto;line-height:1.7;">
-      <strong>SEMBRAMOS ESPERANZA PARA COSECHAR FUTURO</strong> a través de dos proyectos muy distintos con un nexo común: la dignidad del ser humano como valor superior.
-    </p>
+<main class="container">
+  <section class="section" style="text-align:center;">
+    <h1>Qué hacemos</h1>
+    <p class="lead"><strong>SEMBRAMOS ESPERANZA PARA COSECHAR FUTURO</strong> a través de dos proyectos muy distintos con un nexo común: la dignidad del ser humano como valor superior.</p>
   </section>
 
-  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;">
-    <article style="background:#fff;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.08);padding:20px;text-align:center;">
-      <img src="img/asistenciaprisiones.png" alt="Proyecto Asistencia Prisiones" style="width:100%;border-radius:8px;margin-bottom:12px;">
-      <h2 style="color:#7B1E27;margin-bottom:10px;">Proyecto Asistencia Prisiones (PAP)</h2>
-      <p style="margin-bottom:16px;">
-        Sembramos esperanza y cuidamos de tu futuro defendiendo tus derechos y aconsejándote en cada paso del cumplimiento de tu condena. Desde hace más de 10 años, uno de nuestros patronos, Vox Legis, presta asistencia pro bono en el ámbito penitenciario, acompañando y orientando a un gran número de personas privadas de libertad y a sus familias.
-      </p>
-      <a href="asistencia-penitenciaria.html" style="display:inline-block;background-color:#7B1E27;color:#EDE2C9;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:600;">Ver proyecto</a>
-    </article>
+  <section class="section">
+    <div class="cards">
+      <article class="card">
+        <img src="img/asistenciaprisiones.png" alt="Proyecto Asistencia Prisiones (PAP)">
+        <div class="card-body">
+          <h3>Proyecto Asistencia Prisiones (PAP)</h3>
+          <p>Defendemos tus derechos y te acompañamos en cada paso del cumplimiento de tu condena.</p>
+        </div>
+        <div class="card-actions"><a class="btn btn-primary" href="asistencia-penitenciaria.html">Ver proyecto</a></div>
+      </article>
 
-    <article style="background:#fff;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.08);padding:20px;text-align:center;">
-      <img src="img/ayudainfancia.png" alt="Proyecto Asistencia Menores" style="width:100%;border-radius:8px;margin-bottom:12px;">
-      <h2 style="color:#7B1E27;margin-bottom:10px;">Proyecto Asistencia Menores (PAM)</h2>
-      <p style="margin-bottom:16px;">
-        Sembramos protección, cuidados y apoyo a mamás embarazadas y niños recién nacidos para cosechar vida. Nuestro primer proyecto se desarrolla en zonas rurales de Bangladesh, ofreciendo atención médica, nutrición y un entorno seguro a madres y bebés.
-      </p>
-      <a href="proteccion-infancia.html" style="display:inline-block;background-color:#7B1E27;color:#EDE2C9;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:600;">Ver proyecto</a>
-    </article>
+      <article class="card">
+        <img src="img/ayudainfancia.png" alt="Proyecto Asistencia Menores (PAM)">
+        <div class="card-body">
+          <h3>Proyecto Asistencia Menores (PAM)</h3>
+          <p>Protección, cuidados y apoyo a mamás embarazadas y recién nacidos junto a Compassion.</p>
+        </div>
+        <div class="card-actions"><a class="btn btn-primary" href="proteccion-infancia.html">Ver proyecto</a></div>
+      </article>
+    </div>
   </section>
 </main>
 
-<footer style="background-color:#7B1E27;color:#EDE2C9;text-align:center;padding:20px;margin-top:60px;font-size:0.95em;">
-  © Fundación Legis · Todos los derechos reservados
+<footer>
+  © 2025 Fundación Legis ·
+  <a href="aviso-legal.html">Aviso legal</a> ·
+  <a href="cookies-policy.html">Cookies</a> ·
+  <a href="privacidad.html">Privacidad</a> ·
+  <a href="transparencia.html">Transparencia</a>
 </footer>
 
 <script src="js/main.js"></script>
