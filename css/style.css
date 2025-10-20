@@ -83,14 +83,11 @@ nav{margin-left:auto}
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
 .card{background:#fff;border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,.08);overflow:hidden;display:flex;flex-direction:column}
 .card img {
-  width: 100%;
-  height: auto;              /* Evita el recorte */
-  max-height: 320px;         /* Mantiene equilibrio visual */
-  object-fit: contain;       /* Muestra toda la imagen */
-  background: #FAFAFA;       /* Fondo neutro */
-  display: block;
-  margin: 0 auto;
+  width:100%;
+  height:260px;
+  object-fit:cover;
 }
+
 
 .card-body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
 .card h3{margin:0 0 2px}
