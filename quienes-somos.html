@@ -9,61 +9,58 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
-<body style="background-color:#EDE2C9;color:#3C3C3C;font-family:'Open Sans',sans-serif;">
+<body>
 
-<header style="background-color:#EDE2C9;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;">
-  <div class="header-inner" style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
-      <img src="img/logo.jpg" alt="Fundación Legis" style="height:48px;width:auto;">
-    </a>
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
     <nav>
-      <ul id="main-menu" style="list-style:none;display:flex;gap:22px;margin:0;padding:0;">
-        <li><a href="index.html" style="text-decoration:none;color:#3C3C3C;">Inicio</a></li>
-        <li><a href="que-hacemos.html" style="text-decoration:none;color:#3C3C3C;">Qué hacemos</a></li>
-        <li><a href="quienes-somos.html" class="active" style="text-decoration:none;color:#7B1E27;font-weight:700;">Quiénes somos</a></li>
-        <li><a href="colabora.html" class="btn-colabora" style="background-color:#7B1E27;color:#EDE2C9;padding:6px 12px;border-radius:6px;text-decoration:none;font-weight:600;">Colabora</a></li>
+      <ul id="main-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="que-hacemos.html">Qué hacemos</a></li>
+        <li><a class="active" href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch" style="display:flex;gap:6px;">
-      <a href="#" style="color:#7B1E27;font-weight:700;text-decoration:none;">ES</a>
-      <span style="color:#7B1E27;">|</span>
-      <a href="about-us.html" style="color:#3C3C3C;text-decoration:none;">EN</a>
+    <div class="lang-switch">
+      <a class="active" href="#">ES</a><a href="about-us.html">EN</a>
     </div>
   </div>
 </header>
 
-<main style="max-width:1100px;margin:40px auto;padding:0 20px;">
-  <section style="margin-bottom:60px;">
-    <h1 style="color:#7B1E27;text-align:center;margin-bottom:20px;">Quiénes somos</h1>
-    <p style="font-size:1.1em;line-height:1.7;margin-bottom:16px;">
+<main class="container">
+  <section class="section">
+    <h1 style="text-align:center;">Quiénes somos</h1>
+    <p class="lead">
       <strong>FUNDACIÓN LEGIS</strong> se crea para sembrar esperanza en la vida de personas en situaciones difíciles. Nace en Asturias con vocación universal y con el fin de tender una mano por un futuro de valor a colectivos especialmente vulnerables: personas privadas de libertad y menores en situaciones de riesgo extremo.
     </p>
-    <p style="font-size:1.1em;line-height:1.7;">
+    <p>
       Desde una visión global del ser humano y considerando sus dimensiones física, emocional y espiritual, la Fundación Legis, gracias a sus patronos y colaboradores, se compromete a desarrollar, por sí o mediante colaboradores, proyectos que contribuyan a construir una sociedad más justa.
     </p>
   </section>
 
-  <section style="margin-top:40px;">
-    <h2 style="color:#7B1E27;text-align:center;margin-bottom:24px;">Empresas colaboradoras</h2>
-    <p style="text-align:center;max-width:700px;margin:0 auto 30px;">
-      En este espacio mostramos los logos de las empresas que colaboran con la Fundación Legis.
-    </p>
-    <div class="partners" style="display:flex;justify-content:center;flex-wrap:wrap;gap:30px;">
-      <a href="https://voxlegis.es/" target="_blank" rel="noopener">
-        <img src="img/logo-voxlegis.jpg" alt="Vox Legis Abogados" style="height:60px;transition:transform 0.2s ease;">
-      </a>
-      <a href="https://legisinvestment.com/" target="_blank" rel="noopener">
-        <img src="img/logo-legisinvestment.jpg" alt="Legis Investment" style="height:60px;transition:transform 0.2s ease;">
-      </a>
-      <a href="https://ethicaconsultoriaempresarial.com/" target="_blank" rel="noopener">
-        <img src="img/logo-ethica.jpg" alt="Éthica Consultoría Empresarial" style="height:60px;transition:transform 0.2s ease;">
-      </a>
+  <section class="section">
+    <h2 style="text-align:center;">Empresas impulsoras</h2>
+    <div class="partners">
+      <a href="https://voxlegis.es/" target="_blank" rel="noopener"><img src="img/logo-voxlegis.jpg" alt="Vox Legis Abogados"></a>
+      <a href="https://legisinvestment.com/" target="_blank" rel="noopener"><img src="img/logo-legisinvestment.jpg" alt="Legis Investment"></a>
+      <a href="https://ethicaconsultoriaempresarial.com/" target="_blank" rel="noopener"><img src="img/logo-ethica.jpg" alt="Éthica Consultoría Empresarial"></a>
     </div>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align:center;">Empresas colaboradoras</h2>
+    <p style="text-align:center;max-width:720px;margin:0 auto 18px;">En este lugar meteremos los logos de las empresas que colaboren.</p>
+    <div class="collaborators empty-state" aria-label="empresas-colaboradoras"><span>Aquí aparecerán las empresas colaboradoras</span></div>
   </section>
 </main>
 
-<footer style="background-color:#7B1E27;color:#EDE2C9;text-align:center;padding:20px;margin-top:60px;font-size:0.95em;">
-  © Fundación Legis · Todos los derechos reservados
+<footer>
+  © 2025 Fundación Legis ·
+  <a href="aviso-legal.html">Aviso legal</a> ·
+  <a href="cookies-policy.html">Cookies</a> ·
+  <a href="privacidad.html">Privacidad</a> ·
+  <a href="transparencia.html">Transparencia</a>
 </footer>
 
 <script src="js/main.js"></script>
