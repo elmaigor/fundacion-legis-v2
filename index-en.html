@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legis Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index-en.html"><img src="img/logo.jpg" alt="Legis Foundation"></a>
+    <nav>
+      <ul id="main-menu">
+        <li><a href="index-en.html" class="active">Home</a></li>
+        <li><a href="what-we-do.html">What we do</a></li>
+        <li><a href="about-us.html">Who we are</a></li>
+        <li><a href="collaborate.html" class="btn-colabora">Collaborate</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <a href="index.html">ES</a>
+      <a href="#" class="active">EN</a>
+    </div>
+    <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO full height with controlled crop -->
+  <section class="hero">
+    <picture>
+      <img src="img/fotoportada.jpg" alt="Wooden bridge, desert and oasis">
+    </picture>
+
+    <!-- Slogan over the sand (bottom-left), never covering the bridge -->
+    <div class="hero-slogan on-sand">
+      <h1>We sow hope<br>to harvest the future</h1>
+      <div class="hero-actions">
+        <a class="btn btn-alt" href="collaborate.html">Make a donation</a>
+        <a class="btn btn-link-cereza" href="what-we-do.html">Explore our projects</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our projects</h2>
+    <p class="lead">Two lines of action to transform lives.</p>
+
+    <div class="home-projects">
+      <article class="home-block">
+        <img src="img/asistenciapenitenciaria.png" alt="Prison Assistance">
+        <div class="block-text">
+          <h3>Prison Assistance</h3>
+          <p>Legal and social support for people in prison and their families.</p>
+          <a class="btn btn-white" href="penitentiary-assistance.html">Learn more</a>
+        </div>
+      </article>
+
+      <article class="home-block">
+        <img src="img/ayudainfancia.png" alt="Child Protection">
+        <div class="block-text">
+          <h3>Child Protection</h3>
+          <p>Projects that open real opportunities for boys and girls.</p>
+          <a class="btn btn-white" href="childhood-protection.html">Learn more</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Partner companies</h2>
+    <div class="partners column" aria-label="partners">
+      <a href="https://ethicaconsultoriaempresarial.com/" target="_blank" rel="noopener">
+        <img src="img/logo-ethica.jpg" alt="Éthica">
+      </a>
+      <a href="https://legisinvestment.com/" target="_blank" rel="noopener">
+        <img src="img/logo-legisinvestment.jpg" alt="Legis Investment">
+      </a>
+      <a href="https://voxlegis.es/" target="_blank" rel="noopener">
+        <img src="img/logo-voxlegis.jpg" alt="Vox Legis Abogados">
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2025 Legis Foundation ·
+      <a href="legal-notice.html">Legal notice</a> ·
+      <a href="cookies-policy.html">Cookies</a> ·
+      <a href="privacy-policy.html">Privacy</a> ·
+      <a href="transparency.html">Transparency</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Modal (popup) once per session -->
+<div id="galaModal" class="modal" role="dialog" aria-modal="true" aria-label="Legis Foundation Event">
+  <div class="modal-content">
+    <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+    <img src="img/evento-inauguracion.png" alt="Opening Event">
+  </div>
+</div>
+
+<script>
+(function(){
+  // Mobile menu
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('main-menu');
+  if(toggle && menu){
+    toggle.addEventListener('click', ()=>{
+      menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true':'false');
+    });
+  }
+  // Modal once per session
+  const modal = document.getElementById('galaModal');
+  const closeBtn = document.getElementById('modalClose');
+  try{
+    if(modal && !sessionStorage.getItem('gala_shown')) modal.classList.add('show');
+    if(closeBtn){
+      closeBtn.addEventListener('click', ()=>{ modal.classList.remove('show'); sessionStorage.setItem('gala_shown','1'); });
+    }
+    if(modal){
+      modal.addEventListener('click', (e)=>{ if(e.target===modal){ modal.classList.remove('show'); sessionStorage.setItem('gala_shown','1'); }});
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

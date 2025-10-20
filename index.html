@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fundación Legis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
+    <nav>
+      <ul id="main-menu">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="que-hacemos.html">Qué hacemos</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="colabora.html" class="btn-colabora">Colabora</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <a href="#" class="active">ES</a>
+      <a href="index-en.html">EN</a>
+    </div>
+    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO portada a pantalla completa con recorte controlado -->
+  <section class="hero">
+    <picture>
+      <!-- Puedes añadir fuentes WebP/JPEG si quieres -->
+      <img src="img/fotoportada.jpg" alt="Puente, desierto y oasis">
+    </picture>
+
+    <!-- Eslogan sobre la arena (zona inferior izquierda), nunca tapa el puente -->
+    <div class="hero-slogan on-sand">
+      <h1>Sembramos esperanza<br>para cosechar futuro</h1>
+      <div class="hero-actions">
+        <a class="btn btn-alt" href="colabora.html">Haz tu aportación</a>
+        <a class="btn btn-link-cereza" href="que-hacemos.html">Conoce nuestros proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Nuestros proyectos</h2>
+    <p class="lead">Dos líneas de actuación para transformar vidas.</p>
+
+    <div class="home-projects">
+      <article class="home-block">
+        <img src="img/asistenciapenitenciaria.png" alt="Asistencia Penitenciaria">
+        <div class="block-text">
+          <h3>Asistencia Penitenciaria</h3>
+          <p>Apoyo jurídico y social a personas privadas de libertad y a sus familias.</p>
+          <a class="btn btn-white" href="asistencia-penitenciaria.html">Conoce más</a>
+        </div>
+      </article>
+
+      <article class="home-block">
+        <img src="img/ayudainfancia.png" alt="Protección de la Infancia">
+        <div class="block-text">
+          <h3>Protección de la Infancia</h3>
+          <p>Proyectos que abren oportunidades reales para niños y niñas.</p>
+          <a class="btn btn-white" href="proteccion-infancia.html">Conoce más</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Empresas impulsoras</h2>
+    <div class="partners column" aria-label="partners">
+      <a href="https://voxlegis.es/" target="_blank" rel="noopener">
+        <img src="img/logo-voxlegis.jpg" alt="Vox Legis Abogados">
+      </a>
+      <a href="https://legisinvestment.com/" target="_blank" rel="noopener">
+        <img src="img/logo-legisinvestment.jpg" alt="Legis Investment">
+      </a>
+      <a href="https://ethicaconsultoriaempresarial.com/" target="_blank" rel="noopener">
+        <img src="img/logo-ethica.jpg" alt="Éthica">
+      </a>
+    
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2025 Fundación Legis ·
+      <a href="aviso-legal.html">Aviso legal</a> ·
+      <a href="politica-cookies.html">Cookies</a> ·
+      <a href="privacidad.html">Privacidad</a> ·
+      <a href="transparencia.html">Transparencia</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Modal (popup) una vez por sesión -->
+<div id="galaModal" class="modal" role="dialog" aria-modal="true" aria-label="Gala Fundación Legis">
+  <div class="modal-content">
+    <button id="modalClose" class="modal-close" aria-label="Cerrar">&times;</button>
+    <img src="img/evento-inauguracion.png" alt="Evento Inauguración">
+  </div>
+</div>
+
+<script>
+(function(){
+  // Menú móvil
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('main-menu');
+  if(toggle && menu){
+    toggle.addEventListener('click', ()=>{
+      menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true':'false');
+    });
+  }
+  // Modal una vez por sesión
+  const modal = document.getElementById('galaModal');
+  const closeBtn = document.getElementById('modalClose');
+  try{
+    if(modal && !sessionStorage.getItem('gala_shown')) modal.classList.add('show');
+    if(closeBtn){
+      closeBtn.addEventListener('click', ()=>{ modal.classList.remove('show'); sessionStorage.setItem('gala_shown','1'); });
+    }
+    if(modal){
+      modal.addEventListener('click', (e)=>{ if(e.target===modal){ modal.classList.remove('show'); sessionStorage.setItem('gala_shown','1'); }});
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

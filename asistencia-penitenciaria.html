@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asistencia Penitenciaria · Fundación Legis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
+    <nav>
+      <ul id="main-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="que-hacemos.html" class="active">Qué hacemos</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a href="colabora.html" class="btn-colabora">Colabora</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <a href="penitentiary-assistance.html">EN</a>
+      <a href="#" class="active">ES</a>
+    </div>
+    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+
+<main>
+  <section class="section">
+    <h2>Proyecto Asistencia Prisiones (PAP)</h2>
+    <p>Sembramos esperanza y cuidamos de tu futuro defendiendo tus derechos y aconsejándote en cada paso del cumplimiento de tu condena. Desde hace más de 10 años uno de nuestros patronos, <strong>VOX LEGIS</strong>, viene prestando asistencia <em>pro bono</em> en el ámbito penitenciario, acompañando y orientando a un gran número de personas privadas de libertad en situación de vulnerabilidad y a sus familias.</p>
+  </section>
+
+  <section class="section">
+    <div class="cards">
+      <article class="card">
+        <div class="card-body">
+          <h3>1. Nuevos ingresos</h3>
+          <p>Para que la incertidumbre se transforme en esperanza, resolvemos todas tus dudas. De la mano de VOX LEGIS ofrecemos un servicio especializado de acompañamiento, combinando orientación jurídica y apoyo humano desde el inicio.</p>
+          <p>Como la información es la primera forma de libertad, el manual diseñado por VOX LEGIS es la herramienta que entregaremos gratuitamente como primer paso; nuestros beneficiarios contarán con una guía clara que responde a las preguntas más comunes y será una herramienta poderosa para generar confianza.</p>
+          <p><a class="btn btn-white" href="#" aria-label="Manual de nuevos ingresos (próximamente)">Descargar manual</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3>2. Servicios de asesoramiento y defensa penitenciaria</h3>
+          <p>La dignidad humana y los derechos fundamentales pueden verse especialmente comprometidos en una situación de privación de libertad. Ofrecemos una asistencia cercana, humana y de calidad a quienes más lo necesitan.</p>
+          <p>Acompañamos en todas las etapas del cumplimiento: permisos, clasificaciones, sanciones, trabajo penitenciario, acumulaciones de condena, medidas de seguridad, beneficios penitenciarios y más.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-body">
+          <h3>3. Apoyo a las familias</h3>
+          <p>Acompañamos a quienes te sostienen desde fuera. Ofrecemos orientación jurídica y emocional a familiares, facilitando la comunicación con el interno, aclarando trámites y guiándolos en permisos, visitas, beneficios penitenciarios y medidas de reinserción.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="cta">
+      <p><strong>Entra a conocer algunas de sus historias y súmate al proyecto</strong> porque solos no podemos. Construir una sociedad más justa exige justicia para todos y para eso te necesitamos.</p>
+      <p><a class="btn btn-alt" href="#">Vídeos y reseñas</a></p>
+    </div>
+  </section>
+</main>
+
+
+<footer>
+  <div class="footer-inner">
+    <p>© 2025 Fundación Legis ·
+      <a href="aviso-legal.html">Aviso legal</a> ·
+      <a href="politica-cookies.html">Cookies</a> ·
+      <a href="privacidad.html">Privacidad</a> ·
+      <a href="transparencia.html">Transparencia</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('main-menu');
+  if(toggle && menu){
+    toggle.addEventListener('click', ()=>{
+      menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true':'false');
+    });
+  }
+})();
+</script>
+</body>
+</html>
