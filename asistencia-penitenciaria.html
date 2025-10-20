@@ -9,90 +9,78 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
-<body style="background-color:#EDE2C9;color:#3C3C3C;font-family:'Open Sans',sans-serif;">
+<body>
 
-<header style="background-color:#EDE2C9;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;">
-  <div class="header-inner" style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;">
-    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
-      <img src="img/logo.jpg" alt="Fundación Legis" style="height:48px;width:auto;">
-    </a>
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
     <nav>
-      <ul id="main-menu" style="list-style:none;display:flex;gap:22px;margin:0;padding:0;">
-        <li><a href="index.html" style="text-decoration:none;color:#3C3C3C;">Inicio</a></li>
-        <li><a href="que-hacemos.html" style="text-decoration:none;color:#3C3C3C;">Qué hacemos</a></li>
-        <li><a href="quienes-somos.html" style="text-decoration:none;color:#3C3C3C;">Quiénes somos</a></li>
-        <li><a href="colabora.html" class="btn-colabora" style="background-color:#7B1E27;color:#EDE2C9;padding:6px 12px;border-radius:6px;text-decoration:none;font-weight:600;">Colabora</a></li>
+      <ul id="main-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="que-hacemos.html">Qué hacemos</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch" style="display:flex;gap:6px;">
-      <a href="#" style="color:#7B1E27;font-weight:700;text-decoration:none;">ES</a>
-      <span style="color:#7B1E27;">|</span>
-      <a href="penitentiary-assistance.html" style="color:#3C3C3C;text-decoration:none;">EN</a>
+    <div class="lang-switch">
+      <a class="active" href="#">ES</a><a href="penitentiary-assistance.html">EN</a>
     </div>
   </div>
 </header>
 
-<main style="max-width:1000px;margin:40px auto;padding:0 20px;">
-  <section style="text-align:center;margin-bottom:40px;">
-    <h1 style="color:#7B1E27;margin-bottom:15px;">Proyecto Asistencia Prisiones (PAP)</h1>
-    <p style="font-size:1.1em;max-width:800px;margin:0 auto;line-height:1.7;">
-      Sembramos esperanza y cuidamos de tu futuro defendiendo tus derechos y aconsejándote en cada paso del cumplimiento de tu condena.
-    </p>
+<main class="container">
+  <section class="section" style="text-align:center;">
+    <h1>Proyecto Asistencia Prisiones (PAP)</h1>
+    <p class="lead">Sembramos esperanza y cuidamos de tu futuro defendiendo tus derechos y aconsejándote en cada paso del cumplimiento de tu condena.</p>
   </section>
 
-  <article style="margin-bottom:40px;">
-    <h2 style="color:#7B1E27;">1. Nuevos ingresos</h2>
-    <p>
-      Para que la incertidumbre se transforme en esperanza, resolvemos todas tus dudas. Sabemos que el ingreso en prisión puede generar miedo, desorientación e incertidumbre. 
-      Por eso, de la mano de Vox Legis, ofrecemos a nuestros beneficiarios un servicio especializado de acompañamiento, combinando orientación jurídica y apoyo humano desde el inicio.
-    </p>
-    <p>
-      Como la información es la primera forma de libertad, el manual diseñado por Vox Legis es la herramienta que entregamos gratuitamente como primer paso; nuestros beneficiarios contarán con una guía clara que responde a las preguntas más comunes y será una herramienta poderosa para generar confianza.
-    </p>
-    <p>
-      Si no eres aún beneficiario del servicio pero estás interesado en el manual, puedes adquirirlo en este enlace:
-      <a href="#" style="color:#7B1E27;text-decoration:underline;">Solicitar manual</a>.
-    </p>
-  </article>
+  <section class="section">
+    <div class="grid-3">
+      <article class="card">
+        <img src="img/asistencianuevoingreso.jpg" alt="Nuevos ingresos">
+        <div class="card-body">
+          <h3>1. Nuevos ingresos</h3>
+          <p>De la mano de Vox Legis ofrecemos acompañamiento con orientación jurídica y apoyo humano desde el inicio.</p>
+        </div>
+        <div class="card-actions"><a class="btn btn-primary" href="#">Solicitar manual</a></div>
+      </article>
 
-  <article style="margin-bottom:40px;">
-    <h2 style="color:#7B1E27;">2. Servicios de asesoramiento y defensa penitenciaria</h2>
-    <p>
-      La dignidad humana y los derechos fundamentales pueden verse especialmente comprometidos en una situación de privación de libertad. Conscientes de las desigualdades y de la desinformación que rodean el mundo penitenciario, queremos aportar nuestra semilla, ofreciendo a quienes más lo necesitan una asistencia cercana, humana y de calidad. 
-    </p>
-    <p>
-      Porque la defensa de derechos fundamentales no puede ser un privilegio al alcance solo de unos pocos. Acompañamos a los beneficiarios en todas las etapas de su cumplimiento: asesorándoles y, si es preciso, ofreciéndoles la posibilidad de defender sus derechos ante instancias administrativas o judiciales.
-    </p>
-    <p>
-      Ya se trate de permisos, clasificaciones, sanciones, trabajo penitenciario, acumulaciones de condena, medidas de seguridad y beneficios penitenciarios u otros, estamos ahí para garantizar su dignidad y justicia.
-    </p>
-  </article>
+      <article class="card">
+        <img src="img/asistenciajuridica.jpg" alt="Asesoramiento y defensa">
+        <div class="card-body">
+          <h3>2. Asesoramiento y defensa penitenciaria</h3>
+          <p>Asistencia cercana, humana y de calidad. Permisos, clasificaciones, sanciones, trabajo, acumulaciones, medidas y beneficios.</p>
+        </div>
+        <div class="card-actions"><a class="btn btn-primary" href="colabora.html">Apoya el proyecto</a></div>
+      </article>
 
-  <article style="margin-bottom:40px;">
-    <h2 style="color:#7B1E27;">3. Apoyo a las familias</h2>
-    <p>
-      Acompañamos a quienes te sostienen desde fuera, ellos se lo merecen. La prisión no solo afecta a quien cumple condena, sino también a quienes esperan fuera. Las familias cargan con la incertidumbre, el miedo y la falta de información, convirtiéndose en víctimas silenciosas del sistema penitenciario.
-    </p>
-    <p>
-      En Fundación Legis creemos que acompañarlas es también una forma de hacer justicia. Ofrecemos orientación jurídica y emocional a los familiares de personas privadas de libertad, facilitando la comunicación con el interno, aclarando trámites y procedimientos, y guiándolos en todo lo relacionado con permisos, visitas, beneficios penitenciarios o medidas de reinserción.
-    </p>
-    <p>
-      Nuestro compromiso es tender puentes, aliviar la carga y sembrar serenidad para cosechar futuro.
-    </p>
-  </article>
+      <article class="card">
+        <img src="img/asistenciafamilias.png" alt="Apoyo a las familias">
+        <div class="card-body">
+          <h3>3. Apoyo a las familias</h3>
+          <p>Orientación jurídica y emocional para quienes sostienen desde fuera: comunicación, permisos, visitas y reinserción.</p>
+        </div>
+        <div class="card-actions"><a class="btn btn-primary" href="colabora.html">Colabora</a></div>
+      </article>
+    </div>
+  </section>
 
-  <section style="text-align:center;margin-top:60px;">
-    <h3 style="color:#7B1E27;margin-bottom:12px;">Conoce sus historias y súmate al proyecto</h3>
-    <p>Porque solos no podemos. Construir una sociedad más justa exige justicia para todos, y para eso te necesitamos.</p>
-    <a href="colabora.html" style="display:inline-block;margin-top:10px;background-color:#7B1E27;color:#EDE2C9;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:600;">Colabora con nosotros</a>
+  <section class="section" style="text-align:center;">
+    <h2>Vídeos y reseñas</h2>
+    <p>Porque solos no podemos. Construir una sociedad más justa exige justicia para todos.</p>
   </section>
 </main>
 
-<footer style="background-color:#7B1E27;color:#EDE2C9;text-align:center;padding:20px;margin-top:60px;font-size:0.95em;">
-  © Fundación Legis · Todos los derechos reservados
+<footer>
+  © 2025 Fundación Legis ·
+  <a href="aviso-legal.html">Aviso legal</a> ·
+  <a href="cookies-policy.html">Cookies</a> ·
+  <a href="privacidad.html">Privacidad</a> ·
+  <a href="transparencia.html">Transparencia</a>
 </footer>
 
 <script src="js/main.js"></script>
 </body>
 </html>
+
 
