@@ -1,100 +1,162 @@
-/* --------------------------
-   ESTILOS GENERALES
---------------------------- */
+/* ==========================================================
+   FUNDACIÓN LEGIS · Estilo corporativo estable y completo
+   ========================================================== */
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f8f6f2;
-  color: #333;
+:root {
+  --granate: #7B1E27;
+  --granate-oscuro: #5E121A;
+  --dorado: #C6A34F;
+  --dorado-suave: #E0C97C;
+  --beige: #F8F6F2;
+  --gris-texto: #333333;
+  --blanco: #FFFFFF;
+  --fuente: 'Open Sans', sans-serif;
+  --max-width: 1200px;
+}
+
+/* --------------------------
+   RESETEO Y BASE
+--------------------------- */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* --------------------------
-   ENCABEZADO / NAVBAR
---------------------------- */
+html, body {
+  background: var(--beige);
+  color: var(--gris-texto);
+  font-family: var(--fuente);
+  line-height: 1.6;
+}
 
+/* --------------------------
+   ENCABEZADO Y NAVEGACIÓN
+--------------------------- */
 header {
-  background-color: #7b1e27; /* granate institucional */
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: var(--granate);
+  border-bottom: 3px solid var(--dorado);
 }
 
-header img.logo {
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img,
+img.logo {
   height: 55px;
+  width: auto;
+  object-fit: contain;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin-left: 20px;
+  gap: 25px;
 }
 
 nav ul li a {
-  color: white;
+  color: var(--blanco);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #c6a34f; /* dorado elegante */
+  color: var(--dorado);
 }
 
-nav .highlight {
-  background-color: #c6a34f;
-  color: #7b1e27;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: bold;
-  border: 1px solid #c6a34f;
+/* BOTÓN DESTACADO: COLABORA */
+nav ul li a.highlight,
+.btn-colabora {
+  background-color: transparent;
+  color: var(--dorado);
+  border: 2px solid var(--dorado);
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
-nav .highlight:hover {
-  background-color: #7b1e27;
-  color: #c6a34f;
-  border: 1px solid #c6a34f;
+nav ul li a.highlight:hover,
+.btn-colabora:hover {
+  background-color: var(--dorado);
+  color: var(--granate);
 }
 
 /* --------------------------
-   TITULARES Y TEXTOS
+   HERO / PORTADA
 --------------------------- */
-
-h1, h2, h3 {
-  color: #7b1e27;
-  text-align: center;
+.hero {
+  position: relative;
+  width: 100%;
+  height: 68vh;
+  overflow: hidden;
 }
 
-p {
-  line-height: 1.6;
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 12%;
+  left: 8%;
+  color: var(--blanco);
+  max-width: 600px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.hero-buttons .btn-primary {
+  background-color: var(--granate);
+  color: var(--blanco);
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: bold;
+  border: none;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: var(--dorado);
+  color: var(--granate);
+}
+
+.hero-buttons .btn-secondary {
+  color: var(--blanco);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+  padding: 10px 2px;
+}
+
+.hero-buttons .btn-secondary:hover {
+  color: var(--dorado);
+  border-color: var(--dorado);
 }
 
 /* --------------------------
-   SECCIONES GENERALES
+   TARJETAS DE PROYECTOS
 --------------------------- */
-
-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* --------------------------
-   TARJETAS DE PROYECTO
---------------------------- */
-
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -105,50 +167,46 @@ section {
 }
 
 .project-card {
-  background-color: #fff;
+  background-color: var(--blanco);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* ✅ CORRECCIÓN DE IMÁGENES CORTADAS */
+/* ✅ CORRECCIÓN DE IMÁGENES CORTADAS (PAM) */
 .project-card img {
   width: 100%;
   height: auto;
   max-height: 350px;
-  object-fit: contain; /* muestra la imagen completa */
+  object-fit: contain;
+  background-color: var(--beige);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  display: block;
-  margin: 0 auto;
-  background-color: #f8f6f2; /* fondo beige coherente */
 }
 
 .project-card h3 {
+  color: var(--granate);
   margin: 20px;
-  color: #7b1e27;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .project-card p {
   margin: 0 20px 20px;
-  color: #333;
+  color: var(--gris-texto);
 }
 
-/* BOTONES DENTRO DE TARJETAS */
 .project-card a.button {
   display: inline-block;
-  background-color: #7b1e27;
-  color: #fff;
+  background-color: var(--granate);
+  color: var(--blanco);
   font-weight: bold;
   text-align: center;
   padding: 10px 20px;
@@ -159,35 +217,58 @@ section {
 }
 
 .project-card a.button:hover {
-  background-color: #c6a34f;
-  color: #7b1e27;
+  background-color: var(--dorado);
+  color: var(--granate);
+}
+
+/* --------------------------
+   QUIÉNES SOMOS / EMPRESAS
+--------------------------- */
+.partners,
+.collaborators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  align-items: center;
+}
+
+.partners img,
+.collaborators img {
+  height: 70px;
+  width: auto;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.partners img:hover,
+.collaborators img:hover {
+  transform: scale(1.05);
 }
 
 /* --------------------------
    FOOTER
 --------------------------- */
-
 footer {
-  background-color: #7b1e27;
-  color: white;
+  background-color: var(--granate);
+  color: var(--blanco);
   text-align: center;
   padding: 20px;
   font-size: 14px;
-  border-top: 3px solid #c6a34f;
+  border-top: 3px solid var(--dorado);
 }
 
 /* --------------------------
    RESPONSIVE
 --------------------------- */
-
 @media (max-width: 768px) {
-  nav ul {
+  .header-inner {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .projects-container {
@@ -196,6 +277,10 @@ footer {
 
   .project-card img {
     max-height: 280px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
   }
 }
 
