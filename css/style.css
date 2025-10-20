@@ -1,286 +1,162 @@
 /* ==========================================================
-   FUNDACIÓN LEGIS · Estilo corporativo estable y completo
+   FUNDACIÓN LEGIS · Estilo corporativo moderno y elegante
    ========================================================== */
 
-:root {
-  --granate: #7B1E27;
-  --granate-oscuro: #5E121A;
-  --dorado: #C6A34F;
-  --dorado-suave: #E0C97C;
-  --beige: #F8F6F2;
-  --gris-texto: #333333;
-  --blanco: #FFFFFF;
-  --fuente: 'Open Sans', sans-serif;
-  --max-width: 1200px;
+:root{
+  --granate:#7B1E27;
+  --granate-osc:#5E121A;
+  --dorado:#C6A34F;
+  --dorado-suave:#E0C97C;
+  --gris-claro:#FAFAFA;
+  --gris-texto:#333333;
+  --blanco:#fff;
+  --fuente:'Open Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --max:1200px;
 }
 
-/* --------------------------
-   RESETEO Y BASE
---------------------------- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Reset básico */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--gris-claro);color:var(--gris-texto);font-family:var(--fuente);line-height:1.6}
+img{max-width:100%;display:block}
+
+/* Layout utilitario */
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3{color:var(--granate);font-weight:700;line-height:1.2}
+a{color:var(--granate);text-decoration:none}
+a:hover{color:var(--dorado)}
+h2::after{content:"";display:block;width:64px;height:3px;background:var(--dorado);margin:8px auto;border-radius:2px}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:var(--granate);border-bottom:2px solid var(--dorado-suave)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:24px}
+.logo img{
+  height:52px;
+  width:auto;
+  object-fit:contain;
+} /* Logo visible, sin filtro */
+nav{margin-left:auto}
+#main-menu{list-style:none;display:flex;gap:26px}
+#main-menu a{color:var(--blanco);font-weight:600;position:relative;transition:color .2s}
+#main-menu a:hover{color:var(--dorado)}
+#main-menu .active::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--dorado)}
+
+/* Botón Colabora – versión corregida */
+.btn-colabora{
+  background:transparent;
+  color:var(--dorado);
+  padding:8px 14px;
+  border:2px solid var(--dorado);
+  border-radius:10px;
+  font-weight:700;
+  transition:all .25s ease-in-out;
+}
+.btn-colabora:hover,
+#main-menu a.btn-colabora:hover,
+#main-menu a.btn-colabora.active{
+  background:var(--dorado);
+  color:var(--granate);
+  border-color:var(--dorado);
 }
 
-html, body {
-  background: var(--beige);
-  color: var(--gris-texto);
-  font-family: var(--fuente);
-  line-height: 1.6;
+/* Selector de idioma */
+.lang-switch{display:flex;gap:8px;align-items:center;margin-left:12px}
+.lang-switch a{background:rgba(255,255,255,.15);color:var(--blanco);padding:6px 8px;border-radius:8px;font-weight:700}
+.lang-switch a.active{background:var(--blanco);color:var(--granate)}
+
+/* Hero portada */
+.hero{position:relative}
+.hero picture img{width:100%;height:68vh;object-fit:cover;object-position:center}
+.hero-slogan{position:absolute;left:8%;bottom:10%;max-width:560px;color:#fff}
+.hero-slogan h1{font-size:2.6rem;margin:0 0 14px;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.hero-actions{display:flex;gap:18px;align-items:center}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700}
+.btn-primary{background:var(--granate);color:#fff}
+.btn-primary:hover{background:var(--dorado);color:var(--granate)}
+.btn-link{color:#fff;border-bottom:2px solid rgba(255,255,255,.35);padding:6px 2px}
+.btn-link:hover{color:#fff;border-color:var(--dorado)}
+
+/* Secciones */
+.section{padding:40px 0}
+.lead{font-size:1.1rem}
+
+/* Cards proyectos */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.card{background:#fff;border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,.08);overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:260px;object-fit:cover}
+.card-body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{margin:0 0 2px}
+.card p{flex:1}
+.card .card-actions{padding:0 16px 18px}
+.card .btn{width:max-content}
+
+/* Partners & Collaborators */
+.partners,.collaborators{display:flex;flex-wrap:wrap;justify-content:center;gap:28px}
+.partners a,.collaborators a{display:inline-flex;align-items:center;justify-content:center;padding:6px 10px}
+.partners img,.collaborators img{height:70px;width:auto;transition:transform .2s,opacity .2s}
+.partners img:hover,.collaborators img:hover{transform:scale(1.05);opacity:.95}
+.collaborators.empty-state{min-height:120px;min-width:60%;border:2px dashed var(--dorado);border-radius:10px;background:rgba(198,163,79,.06);color:var(--granate);font-weight:600;display:flex;align-items:center;justify-content:center;padding:16px;text-align:center}
+
+/* Grids */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+/* Footer */
+footer{background:var(--granate);color:#fff;text-align:center;padding:22px 16px;margin-top:50px;border-top:2px solid var(--dorado-suave)}
+footer a{color:#fff;opacity:.9}
+footer a:hover{color:var(--dorado)}
+
+/* Responsive */
+@media (max-width:980px){.cards,.grid-2,.grid-3{grid-template-columns:1fr}}
+@media (max-width:700px){
+  .hero picture img{height:54vh}
+  .hero-slogan{left:6%;right:6%}
 }
 
-/* --------------------------
-   ENCABEZADO Y NAVEGACIÓN
---------------------------- */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--granate);
-  border-bottom: 3px solid var(--dorado);
-}
-
-.header-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo img,
-img.logo {
-  height: 55px;
-  width: auto;
-  object-fit: contain;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav ul li a {
-  color: var(--blanco);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: var(--dorado);
-}
-
-/* BOTÓN DESTACADO: COLABORA */
-nav ul li a.highlight,
-.btn-colabora {
-  background-color: transparent;
-  color: var(--dorado);
-  border: 2px solid var(--dorado);
-  border-radius: 10px;
-  padding: 6px 14px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-nav ul li a.highlight:hover,
-.btn-colabora:hover {
-  background-color: var(--dorado);
-  color: var(--granate);
-}
-
-/* --------------------------
-   HERO / PORTADA
---------------------------- */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 68vh;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.hero-text {
-  position: absolute;
-  bottom: 12%;
-  left: 8%;
-  color: var(--blanco);
-  max-width: 600px;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.hero-buttons .btn-primary {
-  background-color: var(--granate);
-  color: var(--blanco);
-  border-radius: 8px;
-  padding: 10px 18px;
-  font-weight: bold;
-  border: none;
-}
-
-.hero-buttons .btn-primary:hover {
-  background-color: var(--dorado);
-  color: var(--granate);
-}
-
-.hero-buttons .btn-secondary {
-  color: var(--blanco);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-  font-weight: bold;
-  padding: 10px 2px;
-}
-
-.hero-buttons .btn-secondary:hover {
-  color: var(--dorado);
-  border-color: var(--dorado);
-}
-
-/* --------------------------
-   TARJETAS DE PROYECTOS
---------------------------- */
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+/* === Popup Gala Benéfica === */
+.popup-gala {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
   justify-content: center;
-  align-items: stretch;
-  margin-top: 40px;
+  align-items: center;
+  z-index: 9999;
 }
-
-.project-card {
-  background-color: var(--blanco);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.popup-gala.active { display: flex; }
+.popup-content {
+  position: relative;
+  background: transparent;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 12px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.4s ease;
 }
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
-/* ✅ CORRECCIÓN DE IMÁGENES CORTADAS (PAM) */
-.project-card img {
+.popup-content img {
   width: 100%;
   height: auto;
-  max-height: 350px;
-  object-fit: contain;
-  background-color: var(--beige);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  display: block;
+  border-radius: 8px;
 }
-
-.project-card h3 {
-  color: var(--granate);
-  margin: 20px;
-  font-weight: 700;
-}
-
-.project-card p {
-  margin: 0 20px 20px;
-  color: var(--gris-texto);
-}
-
-.project-card a.button {
-  display: inline-block;
-  background-color: var(--granate);
+#close-popup {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: var(--granate);
   color: var(--blanco);
+  border: none;
+  font-size: 1.6rem;
   font-weight: bold;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 6px;
-  margin: 0 20px 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  line-height: 1;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: background .2s;
 }
-
-.project-card a.button:hover {
-  background-color: var(--dorado);
-  color: var(--granate);
+#close-popup:hover { background: var(--dorado); color: var(--granate); }
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
-
-/* --------------------------
-   QUIÉNES SOMOS / EMPRESAS
---------------------------- */
-.partners,
-.collaborators {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 28px;
-  align-items: center;
-}
-
-.partners img,
-.collaborators img {
-  height: 70px;
-  width: auto;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.partners img:hover,
-.collaborators img:hover {
-  transform: scale(1.05);
-}
-
-/* --------------------------
-   FOOTER
---------------------------- */
-footer {
-  background-color: var(--granate);
-  color: var(--blanco);
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  border-top: 3px solid var(--dorado);
-}
-
-/* --------------------------
-   RESPONSIVE
---------------------------- */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .projects-container {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card img {
-    max-height: 280px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-}
-
