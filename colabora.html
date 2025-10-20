@@ -1,82 +1,105 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Colabora · Fundación Legis</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap'><link rel='stylesheet' href='css/style.css'></head><body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colabora · Fundación Legis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
+</head>
+<body style="background-color:#EDE2C9;color:#3C3C3C;font-family:'Open Sans',sans-serif;">
 
-<header>
-  <div class="header-inner">
-    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
+<header style="background-color:#EDE2C9;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;">
+  <div class="header-inner" style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;">
+    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:10px;">
+      <img src="img/logo.jpg" alt="Fundación Legis" style="height:48px;width:auto;">
+    </a>
     <nav>
-      <ul id="main-menu">
-        <li><a href="index.html" >Inicio</a></li>
-        <li><a href="que-hacemos.html" >Qué hacemos</a></li>
-        <li><a href="quienes-somos.html" >Quiénes somos</a></li>
-        <li><a href="colabora.html" class="btn-colabora active">Colabora</a></li>
+      <ul id="main-menu" style="list-style:none;display:flex;gap:22px;margin:0;padding:0;">
+        <li><a href="index.html" style="text-decoration:none;color:#3C3C3C;">Inicio</a></li>
+        <li><a href="que-hacemos.html" style="text-decoration:none;color:#3C3C3C;">Qué hacemos</a></li>
+        <li><a href="quienes-somos.html" style="text-decoration:none;color:#3C3C3C;">Quiénes somos</a></li>
+        <li><a href="colabora.html" class="active btn-colabora" style="background-color:#7B1E27;color:#EDE2C9;padding:6px 12px;border-radius:6px;text-decoration:none;font-weight:600;">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch">
-      <a href="#" class="active">ES</a>
-      <a href="index-en.html" >EN</a>
+    <div class="lang-switch" style="display:flex;gap:6px;">
+      <a href="#" style="color:#7B1E27;font-weight:700;text-decoration:none;">ES</a>
+      <span style="color:#7B1E27;">|</span>
+      <a href="collaborate.html" style="color:#3C3C3C;text-decoration:none;">EN</a>
     </div>
-    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
   </div>
 </header>
 
-<main>
-  <section class="section">
-    <h2>Colabora</h2>
-    <p class="lead">Con tu ayuda podemos sembrar más semillas y cosechar más frutos. El impacto de cada proyecto depende de ti.</p>
+<main style="max-width:1100px;margin:40px auto;padding:0 20px;">
+  <section style="text-align:center;margin-bottom:40px;">
+    <h1 style="color:#7B1E27;margin-bottom:15px;">Colabora con nosotros</h1>
+    <p style="font-size:1.1em;max-width:800px;margin:0 auto;line-height:1.7;">
+      Con tu ayuda podemos sembrar más semillas, podemos cosechar más frutos. El impacto de cada proyecto depende de ti.
+    </p>
   </section>
 
-  <section class="section">
-    <h3>Beneficios fiscales</h3>
-    <p>Aplican los beneficios fiscales vigentes para donaciones a fundaciones. (Contenido a adaptar según el modelo de <em>Compassion</em> y normativa española.)</p>
+  <section style="margin-bottom:40px;">
+    <h2 style="color:#7B1E27;">Beneficios fiscales</h2>
+    <p>
+      Tu colaboración con Fundación Legis tiene ventajas fiscales. Puedes consultar los beneficios aplicables a donaciones según la normativa vigente y conocer más en el sitio de nuestra organización colaboradora, <a href="https://www.compassion.es" target="_blank" rel="noopener" style="color:#7B1E27;text-decoration:underline;">Compassion España</a>.
+    </p>
   </section>
 
-  <section class="section">
-    <h3>Cuenta para donaciones</h3>
-    <p><strong>Caixabank</strong> · <strong>ES86 2100 3154 1222 0026 8766</strong></p>
+  <section style="margin-bottom:40px;">
+    <h2 style="color:#7B1E27;">Cuenta bancaria</h2>
+    <p>
+      Entidad: <strong>Caixabank</strong><br />
+      IBAN: <strong>ES86 2100 3154 1222 0026 8766</strong>
+    </p>
   </section>
 
-  <section class="section">
-    <div class="grid-2">
-      <article class="card">
-        <div class="card-body">
-          <h3>Proyecto Asistencia Prisiones (PAP)</h3>
-          <a class="btn btn-alt" href="asistencia-penitenciaria.html">Ver detalles</a>
-        </div>
+  <section style="margin-bottom:40px;">
+    <h2 style="color:#7B1E27;">Proyectos a los que puedes destinar tu ayuda</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:20px;">
+      <article style="background:#fff;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.08);padding:20px;text-align:center;">
+        <h3 style="color:#7B1E27;">Proyecto Asistencia Prisiones (PAP)</h3>
+        <p>Apoya la asistencia jurídica y humana a personas privadas de libertad y a sus familias.</p>
+        <a href="asistencia-penitenciaria.html" style="display:inline-block;background-color:#7B1E27;color:#EDE2C9;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:600;">Ver más</a>
       </article>
-      <article class="card">
-        <div class="card-body">
-          <h3>Proyecto Asistencia Menores (PAM)</h3>
-          <a class="btn btn-alt" href="proteccion-infancia.html">Ver detalles</a>
-        </div>
-      </article>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="grid-2">
-      <article class="card">
-        <div class="card-body">
-          <h3>Voluntariado (¿Eres jurista?)</h3>
-          <p>Si crees en el proyecto y puedes ayudar con tu tiempo y tus conocimientos, ¡te necesitamos!</p>
-          <a class="btn btn-white" href="mailto:info@fundacionlegis.org?subject=Voluntariado%20jurista">Quiero ser voluntario</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <h3>Donación / Apadrina</h3>
-          <p>Aporta tu contribución. Tu ayuda es una semilla de esperanza.</p>
-          <a class="btn btn-white" href="https://www.compassion.es/hazte-socio/apadrina-un-nino.php" target="_blank" rel="noopener">Apadrinar</a>
-        </div>
+      <article style="background:#fff;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.08);padding:20px;text-align:center;">
+        <h3 style="color:#7B1E27;">Proyecto Asistencia Menores (PAM)</h3>
+        <p>Ayuda a proteger a madres embarazadas y recién nacidos en entornos vulnerables.</p>
+        <a href="proteccion-infancia.html" style="display:inline-block;background-color:#7B1E27;color:#EDE2C9;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:600;">Ver más</a>
       </article>
     </div>
+  </section>
+
+  <section style="margin-bottom:40px;">
+    <h2 style="color:#7B1E27;">Voluntariado</h2>
+    <p>
+      ¿Eres jurista? Si crees en el proyecto y piensas que puedes ayudar con tu tiempo y tus conocimientos, súmate. Te necesitamos.
+    </p>
+    <a href="mailto:contacto@fundacionlegis.org" style="display:inline-block;background-color:#7B1E27;color:#EDE2C9;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:600;">Ofrecerme como voluntario</a>
+  </section>
+
+  <section style="margin-bottom:40px;">
+    <h2 style="color:#7B1E27;">Donación</h2>
+    <p>
+      Aporta tu granito de arena. Tu contribución es una semilla de esperanza para alguien. Puedes hacerlo mediante transferencia bancaria o contactando con nosotros.
+    </p>
+  </section>
+
+  <section>
+    <h2 style="color:#7B1E27;">Apadrinamiento</h2>
+    <p>
+      Si deseas un compromiso más cercano, puedes apadrinar una madre o un bebé dentro del proyecto PAM. Tu aportación mensual garantiza atención médica, nutrición y un entorno seguro.
+    </p>
+    <a href="proteccion-infancia.html" style="display:inline-block;background-color:#7B1E27;color:#EDE2C9;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:600;">Apadrina ahora</a>
   </section>
 </main>
 
-<footer>
-  <div class="footer-inner">
-    <p>© 2025 Fundación Legis · <a href="aviso-legal.html">Aviso legal</a> · 
-    <a href="politica-cookies.html">Cookies</a> · 
-    <a href="privacidad.html">Privacidad</a> · 
-    <a href="transparencia.html">Transparencia</a></p>
-  </div>
-</footer><script src='js/main.js'></script></body></html>
+<footer style="background-color:#7B1E27;color:#EDE2C9;text-align:center;padding:20px;margin-top:60px;font-size:0.95em;">
+  © Fundación Legis · Todos los derechos reservados
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
