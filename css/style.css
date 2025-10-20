@@ -1,293 +1,230 @@
-:root{
-  --cereza:#e03c58; /* acentos y links */
-  --verde:#a2c301;  /* Colabora */
-  --max:1200px;
-  --negro:#222;
-  --gris:#666;
-  --borde:#e8e8ef;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:'Open Sans',system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--negro);line-height:1.6;background:#f9f9f9}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-a:hover{text-decoration:underline}
+/* ==========================================
+   FUNDACIÓN LEGIS · Estilos globales
+   ========================================== */
 
-/* Header */
-header{position:sticky;top:0;z-index:1000;background:var(--cereza);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.12)}
-.header-inner{max-width:var(--max);margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:24px}
-.logo img{height:44px;width:auto}
-nav{margin-left:auto}
-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:22px;align-items:center}
-nav a{color:#fff;font-weight:600;opacity:.95}
-nav a:hover, nav a.active{opacity:1;text-decoration:underline;text-underline-offset:6px}
-.btn-colabora{background:var(--verde);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700}
-.btn-colabora:hover{filter:brightness(.95);text-decoration:none}
-.lang-switch{display:flex;gap:8px;align-items:center;margin-left:12px}
-.lang-switch a{background:rgba(255,255,255,.18);color:#fff;padding:6px 10px;border-radius:8px;font-weight:700}
-.lang-switch a.active{background:#fff;color:var(--cereza)}
-.lang-switch a:hover{filter:brightness(.95);text-decoration:none}
-#menu-toggle{display:none;margin-left:12px;background:transparent;border:0;color:#fff;font-size:28px;cursor:pointer}
-@media (max-width:767px){
-  nav ul{position:fixed;inset:60px 0 auto 0;background:var(--cereza);padding:14px 16px;display:none;flex-direction:column;gap:12px}
-  nav ul.open{display:flex}
-  #menu-toggle{display:block}
+:root {
+  --granate: #7B1E27;
+  --dorado: #C6A34F;
+  --beige: #EDE2C9;
+  --texto: #3C3C3C;
+  --blanco: #FFFFFF;
+  --sombra: rgba(0,0,0,0.1);
+  --fuente: 'Open Sans', sans-serif;
 }
 
-/* HERO – Imagen a pantalla completa con recorte controlado */
-.hero{position:relative;isolation:isolate;background:#000}
-.hero picture,.hero img{width:100%;height:100vh;object-fit:cover;object-position:center 60%}
-/* Explicación:
-   - object-fit: cover → ocupa todo el viewport sin bandas
-   - object-position: center 60% → desplaza el foco hacia abajo para ver arena y oasis
-   Ajustes por breakpoints para equilibrar puente+desierto+oasis */
-@media (min-width:1200px){
-  .hero picture,.hero img{object-position:center 52%} /* más puente en escritorio grande */
-}
-@media (max-width:991px){
-  .hero picture,.hero img{height:78vh;object-position:center 64%} /* más arena en tablet */
-}
-@media (max-width:575px){
-  .hero picture,.hero img{height:70vh;object-position:center 68%} /* asegura arena + parte del oasis en móvil */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente);
+  color: var(--texto);
+  background-color: var(--beige);
+  scroll-behavior: smooth;
 }
 
-/* Slogan sobre arena (inferior izquierda), nunca tapa el puente */
-.hero-slogan{
-  position:absolute;
-  left:4%;
-  bottom:60%;
-  z-index:1;
-  color:#fff;
-  text-shadow:0 3px 14px rgba(0,0,0,.55);
-  max-width:min(92%,640px);
-}
-.hero-slogan h1{
-  margin:0 0 10px;
-  font-size:clamp(22px,4.6vw,44px);
-  line-height:1.15;
-}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
-
-/* En móviles, refuerzo de legibilidad sin tapar la foto:
-   solo un suave degradado transparente detrás del texto */
-@media (max-width:575px){
-  .hero-slogan{
-    background:linear-gradient(90deg, rgba(0,0,0,.28), rgba(0,0,0,0));
-    padding:10px 12px;
-    border-radius:8px;
-  }
+/* ===== CABECERA ===== */
+header {
+  background-color: var(--beige);
+  box-shadow: 0 2px 6px var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Botones */
-.btn{display:inline-block;padding:10px 16px;border-radius:8px;font-weight:700;border:2px solid transparent;cursor:pointer}
-.btn-alt{background:var(--verde);border-color:var(--verde);color:#fff} /* Haz tu aportación */
-.btn-alt:hover{filter:brightness(.95);color:#fff;text-decoration:none}
-.btn-link-cereza{background:transparent;border:0;color:var(--cereza)} /* Conoce nuestros proyectos */
-.btn-link-cereza:hover{text-decoration:underline;text-underline-offset:4px}
-.btn-white{background:#fff;border:2px solid var(--cereza);color:var(--cereza)} /* Conoce más */
-.btn-white:hover{background:var(--cereza);color:#fff}
-
-/* Secciones */
-.section{max-width:var(--max);margin:40px auto;padding:0 16px}
-.section h2{margin:0 0 12px;color:var(--cereza);font-size:clamp(22px,4vw,28px)}
-.section p.lead{margin-top:2px;color:var(--gris)}
-
-/* Home projects */
-.home-projects{display:grid;grid-template-columns:1fr;gap:24px}
-.home-block{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.12);background:#000}
-.home-block img{height:360px;object-fit:cover;width:100%}
-.block-text{position:absolute;inset:auto 0 0 0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.75));color:#fff;padding:18px}
-.block-text h3{margin:0 0 8px}
-.block-text .btn-white{background:#fff;border-color:#fff;color:var(--cereza)}
-.block-text .btn-white:hover{background:var(--cereza);color:#fff}
-@media (min-width:900px){.home-projects{grid-template-columns:1fr 1fr}}
-
-/* Grids / Cards */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.card{border:1px solid var(--borde);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-.card-body{padding:14px}
-.card h3{margin:0 0 8px}
-.card p{margin:0 0 12px;color:#555}
-@media (max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr}}
-
-/* Partners */
-.partners{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:10px}
-.partners img{height:42px;width:auto;opacity:.9;transition:transform .2s,opacity .2s}
-.partners a:hover img{transform:scale(1.05);opacity:1}
-.partners.column{flex-direction:column;align-items:center;gap:14px}
-
-/* Contrib */
-.contrib{max-width:var(--max);margin:40px auto;padding:0 16px}
-.contrib .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.contrib .btn-fill{display:block;width:100%;text-align:center}
-@media (max-width:767px){.contrib .cards{grid-template-columns:1fr;gap:14px}}
-
-/* Footer */
-footer{background:#fafafa;border-top:1px solid #eee;margin-top:40px}
-.footer-inner{max-width:var(--max);margin:0 auto;padding:24px 16px;color:#666;font-size:14px;text-align:center}
-.footer-inner a{color:var(--cereza)}
-
-/* Modal (popup una vez por sesión) */
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:2000;justify-content:center;align-items:center;padding:16px}
-.modal.show{display:flex}
-.modal-content{position:relative;max-width:min(900px,95vw);max-height:90vh}
-.modal-content img{width:100%;height:auto;max-height:90vh;border-radius:10px}
-.modal-close{position:absolute;top:-10px;right:-10px;background:#fff;border:0;border-radius:999px;width:36px;height:36px;font-size:22px;cursor:pointer;line-height:36px}
-/* ====== REFUERZO DE ESTILOS PARA FORMULARIOS, MOSAICOS Y TESTIMONIOS ====== */
-
-/* Formulario bonito y centrado */
-.form{
-  display:grid;
-  gap:12px;
-  max-width:720px;
-  margin: 0 auto;           /* centra el formulario */
-}
-.input,.select,.textarea{
-  width:100%;
-  padding:12px 14px;
-  border:1px solid #dcdce6;
-  border-radius:10px;
-  font:inherit;
-  background:#fff;
-}
-.textarea{min-height:120px;resize:vertical}
-.submit{
-  background:var(--cereza);
-  color:#fff;
-  border:0;
-  padding:12px 18px;
-  border-radius:10px;
-  font-weight:700;
-  cursor:pointer;
-}
-.submit:hover{filter:brightness(.95)}
-
-/* Mosaico de fotos/vídeos (Nuestra labor en imágenes) */
-.mosaic{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:14px;
-}
-@media (max-width:900px){
-  .mosaic{grid-template-columns: repeat(2, 1fr)}
-}
-@media (max-width:575px){
-  .mosaic{grid-template-columns: 1fr}
-}
-.media-card{
-  position:relative;
-  background:#f0f2f5;
-  border:1px solid var(--borde);
-  border-radius:12px;
-  overflow:hidden;
-  aspect-ratio:16/9;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.media-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.media-card.video .media-inner{
-  width:100%;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#6b7280;
-  font-weight:700;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.35) 0 40%, transparent 41%),
-    linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.12));
+header .logo img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-/* Voces que inspiran (testimonios) */
-.stories{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:16px;
-}
-@media (max-width:900px){
-  .stories{grid-template-columns: 1fr 1fr}
-}
-@media (max-width:575px){
-  .stories{grid-template-columns: 1fr}
-}
-.story{
-  background:#fff;
-  border:1px solid var(--borde);
-  border-radius:12px;
-  padding:16px;
-  box-shadow:0 4px 12px rgba(0,0,0,.06);
-}
-.story blockquote{
-  margin:0 0 10px;
-  color:#444;
-  font-style:italic;
-}
-.story .author{
-  margin:0;
-  color:#777;
-  font-weight:600;
-  font-size:.95rem;
+header .logo img:hover {
+  transform: scale(1.05);
 }
 
-/* Ajuste de botones blancos rosa para visibilidad siempre */
-.btn-white{
-  background:#fff;
-  border:2px solid var(--cereza);
-  color:var(--cereza);
+#main-menu {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
 }
-.btn-white:hover{
-  background:var(--cereza);
-  color:#fff;
-}
-/* Mejora de legibilidad del link rosa en la portada */
-.btn-link-cereza{
-  color: var(--cereza);
-  font-weight: 800;                  /* más presencia */
+
+#main-menu a {
   text-decoration: none;
-  text-underline-offset: 4px;
-  /* sutil realce para arena clara */
-  text-shadow:
-    0 1px 0 rgba(255,255,255,.55),   /* halo claro muy leve */
-    0 0 8px rgba(0,0,0,.18);         /* contraluz suave */
-  border-bottom: 2px solid rgba(224,60,88,.35); /* línea base elegante */
-  padding-bottom: 2px;
-}
-.btn-link-cereza:hover{
-  text-decoration: underline;
+  color: var(--texto);
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-/* En móviles, micro-fondo translúcido + blur para que se lea siempre,
-   manteniendo apariencia de enlace (no botón sólido) */
-@media (max-width: 575px){
-  .btn-link-cereza{
-    background: rgba(255,255,255,.22);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
-    border: 1px solid rgba(255,255,255,.35);
-    border-radius: 8px;
-    padding: 8px 12px;
-    text-shadow:
-      0 1px 0 rgba(255,255,255,.65),
-      0 0 10px rgba(0,0,0,.20);
-    border-bottom-width: 1px; /* afinamos la línea para que no “pese” */
+#main-menu a:hover {
+  color: var(--granate);
+}
+
+#main-menu .active {
+  color: var(--granate);
+  font-weight: 700;
+}
+
+.btn-colabora {
+  background-color: var(--granate);
+  color: var(--beige);
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-colabora:hover {
+  background-color: var(--dorado);
+  color: var(--blanco);
+}
+
+/* ===== SECCIONES ===== */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  color: var(--granate);
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.7;
+}
+
+a {
+  color: var(--granate);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--dorado);
+}
+
+/* ===== TARJETAS Y GRID ===== */
+.cards, .partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cards article, .partners article {
+  background: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.cards article:hover, .partners img:hover {
+  transform: scale(1.03);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Refuerzo del fondo degradado del bloque de eslogan en móvil
-   (apenas más marcado para mejorar contraste general) */
-@media (max-width: 575px){
-  .hero-slogan{
-    background: linear-gradient(90deg, rgba(0,0,0,.34), rgba(0,0,0,0));
-  }
+/* ===== BOTONES ===== */
+button, .btn, a.btn {
+  display: inline-block;
+  background-color: var(--granate);
+  color: var(--beige);
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* Partners block tweaks */
-.partners.column{display:flex;gap:26px;flex-wrap:wrap;align-items:center;justify-content:center}
-.partners a{display:inline-flex;align-items:center;justify-content:center;padding:6px 10px}
-.partners img{height:42px;width:auto;opacity:.95;transition:transform .2s ease}
-.partners img:hover{transform:scale(1.05)}
+button:hover, .btn:hover, a.btn:hover {
+  background-color: var(--dorado);
+  color: var(--blanco);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--granate);
+  color: var(--beige);
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.95em;
+}
+
+/* ===== IDIOMAS ===== */
+.lang-switch a {
+  color: var(--texto);
+  font-weight: 600;
+}
+
+.lang-switch a:first-child {
+  color: var(--granate);
+  font-weight: 700;
+}
+
+/* ===== IMÁGENES ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ===== ENLACES ESPECIALES ===== */
+a[target="_blank"]:after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: var(--dorado);
+}
+
+/* ===== FORMULARIOS ===== */
+input, textarea {
+  border: 1px solid var(--granate);
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  font-family: var(--fuente);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--dorado);
+  box-shadow: 0 0 4px var(--dorado);
+}
+
+/* ===== RESPONSIVE MENÚ ===== */
+@media (max-width: 768px) {
+  header .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #main-menu {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .lang-switch {
+    align-self: flex-end;
+  }
+}
