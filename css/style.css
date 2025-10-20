@@ -1,38 +1,54 @@
-/* ==========================================
-   FUNDACIÓN LEGIS · Estilos globales
-   ========================================== */
+/* ==========================================================
+   FUNDACIÓN LEGIS · Estilo corporativo moderno y elegante
+   ========================================================== */
 
 :root {
   --granate: #7B1E27;
+  --granate-oscuro: #5E121A;
   --dorado: #C6A34F;
-  --beige: #EDE2C9;
-  --texto: #3C3C3C;
+  --dorado-suave: #E0C97C;
+  --gris-claro: #FAFAFA;
+  --gris-texto: #333333;
   --blanco: #FFFFFF;
-  --sombra: rgba(0,0,0,0.1);
   --fuente: 'Open Sans', sans-serif;
 }
 
-html, body {
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html, body {
   font-family: var(--fuente);
-  color: var(--texto);
-  background-color: var(--beige);
+  color: var(--gris-texto);
+  background-color: var(--gris-claro);
   scroll-behavior: smooth;
 }
 
-/* ===== CABECERA ===== */
+/* ===== HEADER ===== */
 header {
-  background-color: var(--beige);
-  box-shadow: 0 2px 6px var(--sombra);
+  background-color: var(--granate);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 2px solid var(--dorado-suave);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header .logo img {
-  height: 50px;
+  height: 52px;
   width: auto;
+  filter: brightness(0) invert(1); /* logo en blanco */
   transition: transform 0.3s ease;
 }
 
@@ -43,43 +59,59 @@ header .logo img:hover {
 #main-menu {
   list-style: none;
   display: flex;
-  gap: 22px;
-  margin: 0;
-  padding: 0;
+  gap: 26px;
 }
 
 #main-menu a {
   text-decoration: none;
-  color: var(--texto);
+  color: var(--blanco);
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#main-menu a:hover::after,
+#main-menu .active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dorado);
+  left: 0;
+  bottom: -4px;
 }
 
 #main-menu a:hover {
-  color: var(--granate);
-}
-
-#main-menu .active {
-  color: var(--granate);
-  font-weight: 700;
+  color: var(--dorado);
 }
 
 .btn-colabora {
-  background-color: var(--granate);
-  color: var(--beige);
-  padding: 6px 12px;
+  background-color: var(--blanco);
+  color: var(--granate);
+  padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.3s ease;
 }
 
 .btn-colabora:hover {
   background-color: var(--dorado);
-  color: var(--blanco);
+  color: var(--granate);
 }
 
-/* ===== SECCIONES ===== */
+/* ===== SELECTOR DE IDIOMA ===== */
+.lang-switch a {
+  color: var(--blanco);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.lang-switch a:hover {
+  color: var(--dorado);
+}
+
+/* ===== MAIN ===== */
 main {
   max-width: 1100px;
   margin: 40px auto;
@@ -88,24 +120,20 @@ main {
 
 h1, h2, h3 {
   color: var(--granate);
-  font-weight: 700;
+  margin-bottom: 14px;
 }
 
-p {
-  line-height: 1.7;
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--dorado);
+  margin: 8px auto;
+  border-radius: 2px;
 }
 
-a {
-  color: var(--granate);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--dorado);
-}
-
-/* ===== TARJETAS Y GRID ===== */
+/* ===== TARJETAS ===== */
 .cards, .partners {
   display: flex;
   flex-wrap: wrap;
@@ -113,118 +141,90 @@ a:hover {
   gap: 30px;
 }
 
-.cards article, .partners article {
+.cards article {
   background: var(--blanco);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px var(--sombra);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 460px;
 }
 
-.cards article:hover, .partners img:hover {
-  transform: scale(1.03);
+.cards article img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+.cards article h3 {
+  color: var(--granate);
+  margin: 14px 0 8px;
 }
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.cards article p {
+  flex-grow: 1;
+  font-size: 0.98em;
+  padding: 0 16px;
+  line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ===== BOTONES ===== */
-button, .btn, a.btn {
-  display: inline-block;
+.cards article a {
+  margin: 18px auto 22px;
   background-color: var(--granate);
-  color: var(--beige);
-  padding: 8px 14px;
+  color: var(--blanco);
+  padding: 8px 18px;
   border-radius: 6px;
-  text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover, .btn:hover, a.btn:hover {
+.cards article a:hover {
   background-color: var(--dorado);
-  color: var(--blanco);
+  color: var(--granate);
+  transform: translateY(-2px);
+}
+
+.cards article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 /* ===== FOOTER ===== */
 footer {
   background-color: var(--granate);
-  color: var(--beige);
+  color: var(--blanco);
   text-align: center;
   padding: 20px;
   margin-top: 60px;
+  border-top: 2px solid var(--dorado-suave);
   font-size: 0.95em;
 }
 
-/* ===== IDIOMAS ===== */
-.lang-switch a {
-  color: var(--texto);
-  font-weight: 600;
-}
-
-.lang-switch a:first-child {
-  color: var(--granate);
-  font-weight: 700;
-}
-
-/* ===== IMÁGENES ===== */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* ===== ENLACES ESPECIALES ===== */
-a[target="_blank"]:after {
-  content: " ↗";
-  font-size: 0.8em;
-  color: var(--dorado);
-}
-
-/* ===== FORMULARIOS ===== */
-input, textarea {
-  border: 1px solid var(--granate);
-  border-radius: 6px;
-  padding: 8px;
-  width: 100%;
-  font-family: var(--fuente);
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--dorado);
-  box-shadow: 0 0 4px var(--dorado);
-}
-
-/* ===== RESPONSIVE MENÚ ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  header .header-inner {
+  .header-inner {
     flex-direction: column;
     align-items: flex-start;
   }
 
   #main-menu {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     width: 100%;
+    margin-top: 10px;
   }
 
-  .lang-switch {
-    align-self: flex-end;
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards article {
+    max-width: 100%;
   }
 }
