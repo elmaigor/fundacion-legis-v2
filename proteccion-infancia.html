@@ -4,96 +4,63 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Proyecto Asistencia Menores (PAM) · Fundación Legis</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
-
-<body>
+<body class="page-pam">
 
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html">
-      <img src="img/logo.jpg" alt="Fundación Legis">
-    </a>
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="que-hacemos.html">Qué hacemos</a></li>
+        <li><a class="active" href="que-hacemos.html">Qué hacemos</a></li>
         <li><a href="quienes-somos.html">Quiénes somos</a></li>
         <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch">
-      <a class="active" href="#">ES</a>
-      <a href="childhood-protection.html">EN</a>
-    </div>
+    <div class="lang-switch"><a class="active" href="#">ES</a><a href="childhood-protection.html">EN</a></div>
   </div>
 </header>
+<div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
 <main class="container">
-
-  <!-- INTRO -->
   <section class="section" style="text-align:center;">
     <h1>Proyecto Asistencia Menores (PAM)</h1>
-    <p class="lead">
-      Sembramos protección, cuidados y apoyo a mamás embarazadas y niños recién nacidos para cosechar vida.  
-      Nuestro compromiso comienza en Bangladesh, uno de los países con mayor índice de pobreza del mundo.
-    </p>
+    <p class="lead">Protección y apoyo a mamás embarazadas y niños recién nacidos para sembrar vida y futuro. Nuestro compromiso comienza en Bangladesh, uno de los países con mayor índice de pobreza del mundo. :contentReference[oaicite:11]{index=11}</p>
   </section>
 
-  <!-- TARJETAS SUBPROYECTOS -->
   <section class="section">
     <div class="cards">
-
-      <!-- PROYECTO BANGLADESH -->
+      <!-- Bangladesh -->
       <article class="card">
         <img src="img/proyecto-bangladesh.jpg" alt="Proyecto Bangladesh">
         <div class="card-body">
           <h3>Proyecto Bangladesh</h3>
-          <p>
-            De la mano de Compassion, apoyamos un proyecto que ofrecerá durante todo el año 2026 un entorno seguro 
-            para mamás embarazadas y bebés recién nacidos, evitando fallecimientos por falta de atención médica o nutrición.
-          </p>
-          <p>
-            Esperamos extender este proyecto mamá-niño a muchos países y alcanzar al mayor número de mujeres posibles 
-            para que puedan ejercer su derecho a ser mamás y disfrutar de sus hijos en las mejores condiciones.
-          </p>
+          <p>De la mano de Compassion, apoyamos un proyecto que ofrecerá durante todo el año 2026 un entorno seguro para mamás embarazadas y bebés recién nacidos, evitando fallecimientos por falta de atención médica o nutrición. :contentReference[oaicite:12]{index=12}</p>
+          <p>Esperamos extender este proyecto mamá-niño a muchos países y alcanzar al mayor número de mujeres posibles para que puedan ejercer su derecho a ser mamás y disfrutar de sus hijos en las mejores condiciones. :contentReference[oaicite:13]{index=13}</p>
         </div>
         <div class="card-actions">
-          <a class="btn btn-primary" href="colabora.html">Colabora</a>
+          <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Colabora</a>
         </div>
       </article>
 
-      <!-- APADRINA UN NIÑO -->
+      <!-- Apadrina -->
       <article class="card">
         <img src="img/apadrina.jpg" alt="Apadrina un niño">
         <div class="card-body">
           <h3>Apadrina un niño</h3>
-          <p>
-            Tu contribución puede cambiar una vida. A través de Compassion, puedes apadrinar a un niño o niña 
-            en situación de pobreza, proporcionándole educación, alimentación y esperanza para su futuro.
-          </p>
+          <p>Tu contribución puede cambiar una vida. A través de Compassion, puedes apadrinar a un niño o niña en situación de pobreza, proporcionándole educación, alimentación y esperanza para su futuro. :contentReference[oaicite:14]{index=14}</p>
         </div>
         <div class="card-actions">
-          <a class="btn btn-primary" href="https://www.compassion.es/apadrinar-un-nino.php" target="_blank">
-            Apadrina ahora
-          </a>
+          <a class="btn btn-primary" href="https://www.compassion.es/apadrinar-un-nino.php" target="_blank" rel="noopener">Apadrina ahora</a>
         </div>
       </article>
-
     </div>
   </section>
-
-  <!-- FOTOS / VIDEOS -->
-  <section class="section" style="text-align:center;">
-    <h2>Vídeos y fotos</h2>
-    <p>
-      Próximamente compartiremos testimonios e imágenes del avance de nuestros proyectos, para que veas el impacto real de tu ayuda.
-    </p>
-  </section>
-
 </main>
 
 <footer>
