@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Proyecto Asistencia Prisiones (PAP) · Fundación Legis</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <title>Asistencia Penitenciaria (PAP) · Fundación Legis</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
@@ -13,61 +12,65 @@
 
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="que-hacemos.html">Qué hacemos</a></li>
+        <li><a class="active" href="que-hacemos.html">Qué hacemos</a></li>
         <li><a href="quienes-somos.html">Quiénes somos</a></li>
         <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch">
-      <a class="active" href="#">ES</a><a href="penitentiary-assistance.html">EN</a>
-    </div>
+    <div class="lang-switch"><a class="active" href="#">ES</a><a href="penitentiary-assistance.html">EN</a></div>
   </div>
 </header>
+<div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
 <main class="container">
   <section class="section" style="text-align:center;">
     <h1>Proyecto Asistencia Prisiones (PAP)</h1>
-    <p class="lead">Sembramos esperanza y cuidamos de tu futuro defendiendo tus derechos y aconsejándote en cada paso del cumplimiento de tu condena.</p>
+    <p class="lead">Brindamos apoyo jurídico y humano durante el cumplimiento de la pena; sembramos esperanza cuando más se necesita. :contentReference[oaicite:7]{index=7}</p>
   </section>
 
   <section class="section">
-    <div class="grid-3">
+    <div class="cards">
+      <!-- 1. Nuevos ingresos -->
       <article class="card">
-        <img src="img/asistencianuevoingreso.jpg" alt="Nuevos ingresos">
+        <img src="img/asistencianuevosingresos.png" alt="Nuevos ingresos">
         <div class="card-body">
           <h3>1. Nuevos ingresos</h3>
-          <p>De la mano de Vox Legis ofrecemos acompañamiento con orientación jurídica y apoyo humano desde el inicio.</p>
+          <p><strong>UN PROYECTO</strong> para acompañar a quienes ingresan por primera vez en prisión y a sus familias, ofreciéndoles información, orientación y apoyo emocional en un momento marcado por el miedo y la incertidumbre. Nuestro objetivo es transformar la desorientación inicial en conocimiento y serenidad, ayudándoles a comprender sus derechos, el funcionamiento del centro y los recursos disponibles. Porque cuando se entiende lo que ocurre, el miedo disminuye y comienza el camino hacia la adaptación y la esperanza. :contentReference[oaicite:8]{index=8}</p>
         </div>
-        <div class="card-actions"><a class="btn btn-primary" href="#">Solicitar manual</a></div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Solicitar ayuda</a>
+        </div>
       </article>
 
+      <!-- 2. Asesoramiento y defensa penitenciaria -->
       <article class="card">
-        <img src="img/asistenciajuridica.jpg" alt="Asesoramiento y defensa">
+        <img src="img/asesoramientopenitenciario.png" alt="Asesoramiento y defensa penitenciaria">
         <div class="card-body">
-          <h3>2. Asesoramiento y defensa penitenciaria</h3>
-          <p>Asistencia cercana, humana y de calidad. Permisos, clasificaciones, sanciones, trabajo, acumulaciones, medidas y beneficios.</p>
+          <h3>Asesoramiento y defensa penitenciaria</h3>
+          <p>A través del proyecto de acompañamiento para usuarios en situación de vulnerabilidad, la Fundación Legis ofrece apoyo, asesoramiento y asistencia durante el cumplimiento de la pena. Porque creemos firmemente que la justicia no termina en la condena, sino que continúa en la forma en que una sociedad trata a quienes se equivocaron o fueron abandonados en su camino. :contentReference[oaicite:9]{index=9}</p>
         </div>
-        <div class="card-actions"><a class="btn btn-primary" href="colabora.html">Apoya el proyecto</a></div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Solicitar ayuda</a>
+        </div>
       </article>
 
+      <!-- 3. Mujeres en prisión -->
       <article class="card">
-        <img src="img/asistenciafamilias.png" alt="Apoyo a las familias">
+        <img src="img/asistenciafamilias.png" alt="Mujeres en prisión">
         <div class="card-body">
-          <h3>3. Apoyo a las familias</h3>
-          <p>Orientación jurídica y emocional para quienes sostienen desde fuera: comunicación, permisos, visitas y reinserción.</p>
+          <h3>2. Mujeres en prisión</h3>
+          <p><em>Mujer y Libertad</em> es un proyecto de asistencia integral para mujeres en prisión víctimas de adicciones, trata o violencia, que ofrece apoyo jurídico, psicológico y social con perspectiva de género. Su misión es restaurar la dignidad, fortalecer el vínculo materno y acompañar la reinserción, porque cada mujer merece una segunda oportunidad y una vida libre de violencia. :contentReference[oaicite:10]{index=10}</p>
         </div>
-        <div class="card-actions"><a class="btn btn-primary" href="colabora.html">Colabora</a></div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Solicitar ayuda</a>
+        </div>
       </article>
     </div>
-  </section>
-
-  <section class="section" style="text-align:center;">
-    <h2>Vídeos y reseñas</h2>
-    <p>Porque solos no podemos. Construir una sociedad más justa exige justicia para todos.</p>
   </section>
 </main>
 
