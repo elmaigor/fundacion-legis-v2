@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asistencia Penitenciaria · Fundación Legis</title>
+  <title>Asistencia Penitenciaria (PAP) · Fundación Legis</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
@@ -12,6 +12,7 @@
 <header>
   <div class="header-inner">
     <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Inicio</a></li>
@@ -23,32 +24,31 @@
     <div class="lang-switch"><a class="active" href="#">ES</a><a href="penitentiary-assistance.html">EN</a></div>
   </div>
 </header>
+<div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
 <main class="container">
-  <section class="section">
-    <h1 style="text-align:center;">Proyecto Asistencia Prisiones (PAP)</h1>
-    <p class="lead" style="text-align:center;">Sembramos esperanza y cuidamos del futuro defendiendo derechos y acompañando en el cumplimiento de la condena.</p>
+  <section class="section" style="text-align:center;">
+    <h1>Proyecto Asistencia Prisiones (PAP)</h1>
+    <p class="lead">Brindamos apoyo jurídico y humano durante el cumplimiento de la pena; sembramos esperanza cuando más se necesita.</p>
+  </section>
 
+  <section class="section">
     <div class="cards">
       <article class="card">
-        <img src="img/asistencianuevoingreso.jpg" alt="Nuevos ingresos">
+        <img src="img/asistencianuevosingresos.png" alt="Nuevos ingresos">
         <div class="card-body">
           <h3>1. Nuevos ingresos</h3>
-          <p><strong>UN PROYECTO</strong> para acompañar a quienes ingresan por primera vez en prisión y a sus familias, ofreciéndoles información, orientación y apoyo emocional en un momento marcado por el miedo y la incertidumbre. Nuestro objetivo es transformar la desorientación inicial en conocimiento y serenidad, ayudándoles a comprender sus derechos, el funcionamiento del centro y los recursos disponibles. Porque cuando se entiende lo que ocurre, el miedo disminuye y comienza el camino hacia la adaptación y la esperanza.</p>
-          <div class="card-actions">
-            <a href="#" class="btn btn-primary">Solicitar ayuda</a>
-          </div>
+          <p><strong>UN PROYECTO</strong> para acompañar a quienes ingresan por primera vez en prisión y a sus familias, ofreciendo información, orientación y apoyo emocional para transformar el miedo en serenidad.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Solicitar ayuda</a></div>
         </div>
       </article>
 
       <article class="card">
-        <img src="img/asistenciapenitenciaria.png" alt="Asesoramiento y defensa penitenciaria">
+        <img src="img/asesoramientopenitenciario.png" alt="Asesoramiento y defensa penitenciaria">
         <div class="card-body">
           <h3>2. Asesoramiento y defensa penitenciaria</h3>
-          <p>A través del proyecto de acompañamiento para usuarios en situación de vulnerabilidad, la Fundación Legis ofrece apoyo, asesoramiento y asistencia durante el cumplimiento de la pena. Porque creemos firmemente que la justicia no termina en la condena, sino que continúa en la forma en que una sociedad trata a quienes se equivocaron o fueron abandonados en su camino.</p>
-          <div class="card-actions">
-            <a href="#" class="btn btn-primary">Solicitar ayuda</a>
-          </div>
+          <p>Acompañamiento jurídico y humano durante el cumplimiento de la pena, porque la justicia también es cómo tratamos a quienes se equivocaron.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Solicitar ayuda</a></div>
         </div>
       </article>
 
@@ -56,10 +56,8 @@
         <img src="img/asistenciafamilias.png" alt="Apoyo a las familias">
         <div class="card-body">
           <h3>3. Apoyo a las familias</h3>
-          <p>Acompañamos a quienes sostienen desde fuera, porque ellos también lo merecen. La prisión no solo afecta a quien cumple condena, sino también a su entorno. Las familias cargan con la incertidumbre, el miedo y la falta de información, convirtiéndose en víctimas silenciosas de un sistema que pocas veces las mira. Les ayudamos a comprender los procedimientos, gestionar las visitas y acceder a recursos de apoyo emocional y legal.</p>
-          <div class="card-actions">
-            <a href="#" class="btn btn-primary">Solicitar ayuda</a>
-          </div>
+          <p>Acompañamos a quienes sostienen desde fuera: orientación jurídica y emocional, visitas, permisos, comunicación y trámites.</p>
+          <div class="card-actions"><a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Solicitar ayuda</a></div>
         </div>
       </article>
     </div>
@@ -74,9 +72,9 @@
   <a href="transparencia.html">Transparencia</a>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
-
 
 
 
