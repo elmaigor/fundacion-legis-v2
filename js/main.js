@@ -1,49 +1,48 @@
-/* =====================================================
-   FUNDACIÓN LEGIS · main.js
-   ===================================================== */
-
 // Ejecuta el script cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", () => {
 
   // ===== Menú responsive =====
-  const menuToggle = document.createElement("button");
-  menuToggle.id = "menu-toggle";
-  menuToggle.innerHTML = "☰";
-  menuToggle.style.cssText = `
-    background:none;
-    border:none;
-    font-size:1.8em;
-    cursor:pointer;
-    color:#7B1E27;
-    display:none;
-  `;
-
   const headerInner = document.querySelector(".header-inner");
+  const nav = document.querySelector("nav");
   const mainMenu = document.querySelector("#main-menu");
 
-  if (headerInner && mainMenu) {
-    headerInner.insertBefore(menuToggle, mainMenu);
+  if (headerInner && nav && mainMenu) {
+    // Crear botón hamburguesa
+    const menuToggle = document.createElement("button");
+    menuToggle.id = "menu-toggle";
+    menuToggle.innerHTML = "☰";
+    menuToggle.setAttribute("aria-label", "Abrir menú");
+    menuToggle.style.cssText = `
+      background:none;
+      border:none;
+      font-size:1.8em;
+      cursor:pointer;
+      color:#fff;
+      display:none;
+      margin-left:auto;
+    `;
 
+    headerInner.insertBefore(menuToggle, nav);
+
+    // Función de abrir/cerrar menú
     menuToggle.addEventListener("click", () => {
-      mainMenu.classList.toggle("open");
-      if (mainMenu.classList.contains("open")) {
-        mainMenu.style.display = "flex";
-        mainMenu.style.flexDirection = "column";
-        mainMenu.style.gap = "10px";
-      } else {
-        mainMenu.style.display = "";
-      }
+      nav.classList.toggle("active");
     });
 
-    // Mostrar el botón solo en pantallas pequeñas
+    // Cerrar al hacer clic en un enlace del menú
+    mainMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+    });
+
+    // Mostrar u ocultar el botón según tamaño
     const checkMenu = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 880) {
         menuToggle.style.display = "block";
-        mainMenu.style.display = "none";
       } else {
         menuToggle.style.display = "none";
-        mainMenu.style.display = "flex";
-        mainMenu.style.flexDirection = "row";
+        nav.classList.remove("active");
       }
     };
     checkMenu();
@@ -67,10 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const smoothLinks = document.querySelectorAll('a[href^="#"]');
   smoothLinks.forEach(link => {
     link.addEventListener("click", e => {
-      e.preventDefault();
       const targetId = link.getAttribute("href").substring(1);
       const target = document.getElementById(targetId);
       if (target) {
+        e.preventDefault();
         window.scrollTo({
           top: target.offsetTop - 80,
           behavior: "smooth"
