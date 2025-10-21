@@ -19,21 +19,27 @@
 html,body{background:var(--gris-claro);color:var(--gris-texto);font-family:var(--fuente);line-height:1.6}
 img{max-width:100%;display:block}
 
-/* Layout utilitario */
+/* Utilidades */
 .container{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-/* --- Espacio entre títulos y párrafos --- */
-h1,h2,h3{color:var(--granate);font-weight:700;line-height:1.2;margin-bottom:10px}
+/* Tipografía + espaciado */
+h1,h2,h3{color:var(--granate);font-weight:700;line-height:1.2;margin-bottom:12px}
 a{color:var(--granate);text-decoration:none}
 a:hover{color:var(--dorado)}
 h2::after{content:"";display:block;width:64px;height:3px;background:var(--dorado);margin:8px auto;border-radius:2px}
 
-/* Header */
-header{position:sticky;top:0;z-index:100;background:var(--granate);border-bottom:2px solid var(--dorado-suave)}
-.header-inner{max-width:var(--max);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:24px;position:relative;}
+/* Header (3 áreas: logo | nav | idioma) */
+header{
+  position:sticky;top:0;z-index:100;
+  background:var(--granate);border-bottom:2px solid var(--dorado-suave)
+}
+.header-inner{
+  max-width:var(--max);margin:0 auto;padding:10px 20px;
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px
+}
 .logo img{height:52px;width:auto;object-fit:contain}
-nav{margin-left:auto}
-#main-menu{list-style:none;display:flex;gap:26px}
+nav{justify-self:center}
+#main-menu{list-style:none;display:flex;gap:26px;align-items:center}
 #main-menu a{color:var(--blanco);font-weight:600;position:relative;transition:color .2s}
 #main-menu a:hover{color:var(--dorado)}
 #main-menu .active::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--dorado)}
@@ -41,8 +47,7 @@ nav{margin-left:auto}
 /* Botón Colabora */
 .btn-colabora{
   background:transparent;color:var(--dorado);
-  padding:8px 14px;border:2px solid var(--dorado);border-radius:10px;font-weight:700;
-  transition:all .25s ease-in-out;
+  padding:8px 14px;border:2px solid var(--dorado);border-radius:10px;font-weight:700;transition:all .25s ease-in-out;
 }
 .btn-colabora:hover,
 #main-menu a.btn-colabora:hover,
@@ -50,12 +55,12 @@ nav{margin-left:auto}
   background:var(--dorado);color:var(--granate);border-color:var(--dorado);
 }
 
-/* Selector de idioma */
-.lang-switch{display:flex;gap:8px;align-items:center;margin-left:12px}
+/* Idiomas */
+.lang-switch{display:flex;gap:8px;align-items:center}
 .lang-switch a{background:rgba(255,255,255,.15);color:var(--blanco);padding:6px 8px;border-radius:8px;font-weight:700}
 .lang-switch a.active{background:var(--blanco);color:var(--granate)}
 
-/* Hero portada */
+/* Hero */
 .hero{position:relative}
 .hero picture img{width:100%;height:68vh;object-fit:cover;object-position:center}
 .hero-slogan{position:absolute;left:8%;bottom:10%;max-width:560px;color:#fff}
@@ -69,6 +74,7 @@ nav{margin-left:auto}
 
 /* Secciones */
 .section{padding:40px 0}
+.section h1,.section h2{margin-top:12px;margin-bottom:18px}
 .lead{font-size:1.1rem}
 
 /* Cards */
@@ -81,7 +87,7 @@ nav{margin-left:auto}
 .card .card-actions{padding:0 16px 18px}
 .card .btn{width:max-content}
 
-/* Partners */
+/* Partners / Collaborators */
 .partners,.collaborators{display:flex;flex-wrap:wrap;justify-content:center;gap:28px}
 .partners a,.collaborators a{display:inline-flex;align-items:center;justify-content:center;padding:6px 10px}
 .partners img,.collaborators img{height:70px;width:auto;transition:transform .2s,opacity .2s}
@@ -94,95 +100,51 @@ footer a{color:#fff;opacity:.9}
 footer a:hover{color:var(--dorado)}
 
 /* === Popup Gala Benéfica === */
-.popup-gala {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 10px;
+.popup-gala{
+  position:fixed;inset:0;display:none;justify-content:center;align-items:center;
+  background:rgba(0,0,0,.7);z-index:1000;padding:12px
 }
-.popup-gala.active { display: flex; }
-.popup-content {
-  position: relative;
-  background: transparent;
-  max-width: 500px;
-  width: 90%;
-  border-radius: 12px;
-  overflow: hidden;
-  animation: fadeIn 0.4s ease;
+.popup-gala.active{display:flex}
+.popup-content{
+  position:relative;background:transparent;max-width:600px;width:92vw;border-radius:12px;overflow:hidden;animation:fadeIn .4s ease
 }
-.popup-content img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
+.popup-content img{width:100%;height:auto;display:block;border-radius:8px}
+#close-popup{
+  position:absolute;top:8px;right:12px;background:var(--granate);color:#fff;border:0;font-size:1.6rem;font-weight:700;line-height:1;border-radius:50%;width:32px;height:32px;cursor:pointer;transition:background .2s
 }
-#close-popup {
-  position: absolute;
-  top: 8px; right: 12px;
-  background: var(--granate); color: var(--blanco);
-  border: none; font-size: 1.6rem; font-weight: bold; line-height: 1;
-  border-radius: 50%; width: 32px; height: 32px;
-  cursor: pointer; transition: background .2s;
-}
-#close-popup:hover { background: var(--dorado); color: var(--granate); }
+#close-popup:hover{background:var(--dorado);color:var(--granate)}
+@keyframes fadeIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
+/* === Ajuste imágenes PAM (evitar recortes) === */
+.page-pam .card img{width:100%;height:auto;max-height:360px;object-fit:contain;background:#FAFAFA;display:block;margin:0 auto}
+@media (max-width:768px){.page-pam .card img{max-height:280px}}
 
-/* === NUEVO: menú responsive === */
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: var(--blanco);
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-.menu-toggle:focus { outline: none; }
+/* === Menú hamburguesa (móvil) === */
+.nav-toggle{display:none;background:transparent;border:0;width:36px;height:36px;position:relative;cursor:pointer;margin-left:auto}
+.nav-toggle span{position:absolute;left:6px;right:6px;height:2px;background:var(--blanco);transition:transform .25s,opacity .25s}
+.nav-toggle span:nth-child(1){top:10px}
+.nav-toggle span:nth-child(2){top:17px}
+.nav-toggle span:nth-child(3){top:24px}
+.nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(2){opacity:0}
+.nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-@media (max-width: 880px) {
-  nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 70%;
-    background: var(--granate);
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 100px;
-    transition: right 0.3s ease;
+.backdrop{display:none}
+.backdrop.show{display:block;position:fixed;inset:0;background:rgba(0,0,0,.35);backdrop-filter:blur(1px);z-index:900}
+
+/* — Responsive header: el nav se convierte en panel lateral — */
+@media (max-width:900px){
+  .header-inner{grid-template-columns:auto auto auto}
+  .nav-toggle{display:block}
+  nav{
+    position:fixed;top:0;right:-280px;height:100vh;width:280px;background:var(--granate);
+    padding:80px 20px 20px;box-shadow:-4px 0 16px rgba(0,0,0,.25);z-index:950;transition:right .28s ease
   }
-  nav.active { right: 0; }
-  #main-menu {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-  }
-  .lang-switch { position: absolute; top: 16px; right: 20px; }
+  nav.open{right:0}
+  #main-menu{flex-direction:column;gap:18px}
+  /* Mantener idiomas arriba a la derecha, sin solaparse */
+  .lang-switch{justify-self:end}
 }
 
-/* Ajustes responsive popup */
-@media (max-width: 480px) {
-  .popup-content {
-    max-width: 90%;
-    border-radius: 10px;
-  }
-  #close-popup {
-    width: 28px; height: 28px;
-    font-size: 1.2rem;
-  }
-}
 
 
