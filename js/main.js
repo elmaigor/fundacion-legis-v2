@@ -1,81 +1,41 @@
-// Ejecuta el script cuando el DOM esté listo
+// Menú hamburguesa + utilidades
 document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('header nav');
+  const backdrop = document.getElementById('backdrop');
 
-  // ===== Menú responsive =====
-  const headerInner = document.querySelector(".header-inner");
-  const nav = document.querySelector("nav");
-  const mainMenu = document.querySelector("#main-menu");
-
-  if (headerInner && nav && mainMenu) {
-    // Crear botón hamburguesa
-    const menuToggle = document.createElement("button");
-    menuToggle.id = "menu-toggle";
-    menuToggle.innerHTML = "☰";
-    menuToggle.setAttribute("aria-label", "Abrir menú");
-    menuToggle.style.cssText = `
-      background:none;
-      border:none;
-      font-size:1.8em;
-      cursor:pointer;
-      color:#fff;
-      display:none;
-      margin-left:auto;
-    `;
-
-    headerInner.insertBefore(menuToggle, nav);
-
-    // Función de abrir/cerrar menú
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-
-    // Cerrar al hacer clic en un enlace del menú
-    mainMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("active");
-      });
-    });
-
-    // Mostrar u ocultar el botón según tamaño
-    const checkMenu = () => {
-      if (window.innerWidth <= 880) {
-        menuToggle.style.display = "block";
-      } else {
-        menuToggle.style.display = "none";
-        nav.classList.remove("active");
-      }
-    };
-    checkMenu();
-    window.addEventListener("resize", checkMenu);
+  function openMenu(){
+    btn && btn.classList.add('is-open');
+    nav && nav.classList.add('open');
+    backdrop && backdrop.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    btn && btn.setAttribute('aria-expanded','true');
+  }
+  function closeMenu(){
+    btn && btn.classList.remove('is-open');
+    nav && nav.classList.remove('open');
+    backdrop && backdrop.classList.remove('show');
+    document.body.style.overflow = '';
+    btn && btn.setAttribute('aria-expanded','false');
   }
 
-  // ===== Selector de idioma =====
-  const langLinks = document.querySelectorAll(".lang-switch a");
-  langLinks.forEach(link => {
-    const currentPage = window.location.pathname.split("/").pop();
-    if (link.getAttribute("href") === "#" || currentPage === link.getAttribute("href")) {
-      link.style.color = "#7B1E27";
-      link.style.fontWeight = "700";
-    } else {
-      link.style.color = "#3C3C3C";
-      link.style.fontWeight = "600";
-    }
-  });
+  if(btn && nav && backdrop){
+    btn.addEventListener('click', () => nav.classList.contains('open') ? closeMenu() : openMenu());
+    backdrop.addEventListener('click', closeMenu);
+    nav.addEventListener('click', (e) => { if(e.target.closest('a')) closeMenu(); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeMenu(); });
+  }
 
-  // ===== Scroll suave para anclas =====
-  const smoothLinks = document.querySelectorAll('a[href^="#"]');
-  smoothLinks.forEach(link => {
-    link.addEventListener("click", e => {
-      const targetId = link.getAttribute("href").substring(1);
-      const target = document.getElementById(targetId);
-      if (target) {
+  // Scroll suave para anclas internas
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if(target){
         e.preventDefault();
-        window.scrollTo({
-          top: target.offsetTop - 80,
-          behavior: "smooth"
-        });
+        window.scrollTo({top: target.offsetTop - 80, behavior:'smooth'});
       }
     });
   });
-
 });
