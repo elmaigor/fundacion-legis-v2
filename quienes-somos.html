@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quiénes somos · Fundación Legis</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
@@ -13,7 +12,8 @@
 
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Inicio</a></li>
@@ -22,36 +22,45 @@
         <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch">
-      <a class="active" href="#">ES</a><a href="about-us.html">EN</a>
-    </div>
+    <div class="lang-switch"><a class="active" href="#">ES</a><a href="about-us.html">EN</a></div>
   </div>
 </header>
+<div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
 <main class="container">
   <section class="section">
     <h1 style="text-align:center;">Quiénes somos</h1>
-    <p class="lead">
-      <strong>FUNDACIÓN LEGIS</strong> se crea para sembrar esperanza en la vida de personas en situaciones difíciles. Nace en Asturias con vocación universal y con el fin de tender una mano por un futuro de valor a colectivos especialmente vulnerables: personas privadas de libertad y menores en situaciones de riesgo extremo.
-    </p>
-    <p>
-      Desde una visión global del ser humano y considerando sus dimensiones física, emocional y espiritual, la Fundación Legis, gracias a sus patronos y colaboradores, se compromete a desarrollar, por sí o mediante colaboradores, proyectos que contribuyan a construir una sociedad más justa.
-    </p>
+
+    <p>La Fundación LEGIS nace del compromiso personal y profesional de sus patronos con la construcción de un mundo más justo, humano y solidario, donde la dignidad de cada persona sea un valor irrenunciable. :contentReference[oaicite:15]{index=15}</p>
+
+    <p>Convencidos de que la justicia social también se mide por la forma en que una sociedad trata a quienes han perdido su libertad, la Fundación centra su labor en el ámbito penitenciario, ofreciendo apoyo, orientación y oportunidades reales de reinserción a las personas privadas de libertad y a sus familias. :contentReference[oaicite:16]{index=16}</p>
+
+    <p>Nuestro trabajo parte de una convicción profunda: toda persona merece ser escuchada, comprendida y acompañada en su proceso de cambio. Desde esa certeza, impulsamos proyectos que combinan asesoramiento jurídico, apoyo psicosocial y acompañamiento humano, contribuyendo a que el paso por prisión no sea un final, sino el comienzo de una nueva etapa hacia la libertad y la integración. :contentReference[oaicite:17]{index=17}</p>
+
+    <p>Al mismo tiempo, creemos que la verdadera prevención de la exclusión y la delincuencia comienza en la infancia. Por ello, hemos decidido ampliar el ámbito de actuación de la Fundación a estas dos áreas complementarias: la asistencia penitenciaria y el apoyo a la infancia más vulnerable. Apostamos porque desde el inicio de la vida, los niños más desfavorecidos entre los desfavorecidos tengan oportunidades reales de crecer, desarrollarse y construir un futuro distinto. Para ello asistimos en proyectos de apoyo a madres gestantes y bebés recién nacidos. :contentReference[oaicite:18]{index=18}</p>
+
+    <p>La Fundación es, en esencia, una respuesta solidaria al sufrimiento silencioso que habita tras los muros y una apuesta por la esperanza que nace con cada nueva vida, guiada por la convicción de que la justicia y la dignidad se construyen acompañando, reparando y educando desde el principio. :contentReference[oaicite:19]{index=19}</p>
   </section>
 
   <section class="section">
     <h2 style="text-align:center;">Empresas impulsoras</h2>
     <div class="partners">
-      <a href="https://voxlegis.es/" target="_blank" rel="noopener"><img src="img/logo-voxlegis.jpg" alt="Vox Legis Abogados"></a>
-      <a href="https://legisinvestment.com/" target="_blank" rel="noopener"><img src="img/logo-legisinvestment.jpg" alt="Legis Investment"></a>
-      <a href="https://ethicaconsultoriaempresarial.com/" target="_blank" rel="noopener"><img src="img/logo-ethica.jpg" alt="Éthica Consultoría Empresarial"></a>
+      <a href="https://voxlegis.es/" target="_blank" rel="noopener">
+        <img src="img/logo-voxlegis.jpg" alt="Vox Legis Abogados">
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        <img src="img/logo-legisinvestment.jpg" alt="Legis Investment">
+      </a>
+      <a href="#" target="_blank" rel="noopener">
+        <img src="img/logo-ethica.jpg" alt="Éthica Consultoría Penal">
+      </a>
     </div>
   </section>
 
   <section class="section">
     <h2 style="text-align:center;">Empresas colaboradoras</h2>
     <p style="text-align:center;max-width:720px;margin:0 auto 18px;">En este lugar meteremos los logos de las empresas que colaboren.</p>
-    <div class="collaborators empty-state" aria-label="empresas-colaboradoras"><span>Aquí aparecerán las empresas colaboradoras</span></div>
+    <div class="collaborators empty-state"><span>Aquí aparecerán las empresas colaboradoras</span></div>
   </section>
 </main>
 
@@ -66,3 +75,4 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
