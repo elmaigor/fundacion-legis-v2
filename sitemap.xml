@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://elmaigor.github.io/fundacion-legis-v2/</loc>
+    <loc>https://www.fundacionlegis.org/</loc>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://elmaigor.github.io/fundacion-legis-v2/que-hacemos.html</loc>
+    <loc>https://www.fundacionlegis.org/que-hacemos.html</loc>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://elmaigor.github.io/fundacion-legis-v2/quienes-somos.html</loc>
+    <loc>https://www.fundacionlegis.org/quienes-somos.html</loc>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://elmaigor.github.io/fundacion-legis-v2/colabora.html</loc>
+    <loc>https://www.fundacionlegis.org/colabora.html</loc>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://elmaigor.github.io/fundacion-legis-v2/asistencia-penitenciaria.html</loc>
+    <loc>https://www.fundacionlegis.org/asistencia-penitenciaria.html</loc>
   </url>
+
   <url>
-    <loc>https://elmaigor.github.io/fundacion-legis-v2/proteccion-infancia.html</loc>
+    <loc>https://www.fundacionlegis.org/proteccion-infancia.html</loc>
   </url>
+
 </urlset>
+
