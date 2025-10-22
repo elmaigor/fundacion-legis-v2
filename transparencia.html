@@ -1,27 +1,71 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Transparencia · Fundación Legis</title><link rel='stylesheet' href='css/style.css'></head><body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Transparencia · Fundación Legis</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg"/>
+</head>
+<body>
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"/></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="que-hacemos.html" >Qué hacemos</a></li>
-        <li><a href="quienes-somos.html" >Quiénes somos</a></li>
-        <li><a href="colabora.html" class="btn-colabora" >Colabora</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="que-hacemos.html">Qué hacemos</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch">
-      <a href="#" class="active">ES</a>
-      <a href="index-en.html" >EN</a>
-    </div>
-    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <div class="lang-switch"><a class="active" href="#">ES</a></div>
   </div>
-</header><main class='section'><h2>Transparencia</h2><p>Contenido de transparencia pendiente de aportar por la fundación.</p></main>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h1>Transparencia</h1>
+    <p>La Fundación Legis asume un compromiso de transparencia activo, publicando información relevante sobre su actividad, gobernanza y cuentas de forma clara y accesible.</p>
+  </section>
+
+  <section class="section">
+    <h2>Información institucional</h2>
+    <ul>
+      <li><strong>Misión y fines:</strong> Sembrar esperanza y promover proyectos de asistencia a personas privadas de libertad y a menores en situación de riesgo.</li>
+      <li><strong>Órganos de gobierno y patronato:</strong> (Próximamente se publicarán composición y perfiles)</li>
+      <li><strong>Estatutos:</strong> (Enlace a PDF cuando esté disponible)</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Información económica</h2>
+    <ul>
+      <li><strong>Cuentas anuales y memoria de actividades:</strong> (Se publicarán tras su aprobación)</li>
+      <li><strong>Política de donaciones y financiación:</strong> Los fondos se destinan a los proyectos PAP y PAM, con criterios de eficiencia y rendición de cuentas.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Relación con administraciones públicas</h2>
+    <p>En caso de recibir subvenciones o ayudas públicas, se publicará el detalle de las convocatorias, importes, finalidad y órgano concedente.</p>
+  </section>
+
+  <section class="section">
+    <h2>Canales de contacto</h2>
+    <p>Email: <a href="mailto:info@fundacionlegis.org">info@fundacionlegis.org</a></p>
+  </section>
+</main>
+
 <footer>
-  <div class="footer-inner">
-    <p>© 2025 Fundación Legis · <a href="aviso-legal.html">Aviso legal</a> · 
-    <a href="politica-cookies.html">Cookies</a> · 
-    <a href="privacidad.html">Privacidad</a> · 
-    <a href="transparencia.html">Transparencia</a></p>
-  </div>
-</footer><script src='js/main.js'></script></body></html>
+  © 2025 Fundación Legis ·
+  <a href="aviso-legal.html">Aviso legal</a> ·
+  <a href="cookies-policy.html">Cookies</a> ·
+  <a href="privacidad.html">Privacidad</a> ·
+  <a href="transparencia.html" class="active">Transparencia</a>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
