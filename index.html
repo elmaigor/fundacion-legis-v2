@@ -3,16 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fundación Legis · Inicio</title>
+
+  <!-- 🧭 SEO básico -->
+  <title>Fundación Legis · Sembramos esperanza para cosechar futuro</title>
+  <meta name="description" content="Fundación Legis trabaja en programas de reinserción social y protección de la infancia. Sembramos esperanza para cosechar futuro.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Fundación Legis">
+  <link rel="canonical" href="https://www.fundacionlegis.org/">
+
+  <!-- 🖼️ Recursos -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
+
+  <!-- 🧩 Datos estructurados (para Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fundación Legis",
+    "url": "https://www.fundacionlegis.org",
+    "logo": "https://www.fundacionlegis.org/img/logo.jpg",
+    "description": "Fundación Legis trabaja en programas de reinserción social y protección de la infancia.",
+    "sameAs": [
+      "https://www.linkedin.com/company/fundacionlegis",
+      "https://www.instagram.com/fundacionlegis"
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
-<!-- Header común -->
+<!-- Header -->
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Logotipo de Fundación Legis" /></a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
@@ -22,33 +47,21 @@
         <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch"><a class="active" href="#">ES</a><a href="index-en.html">EN</a></div>
+    <div class="lang-switch">
+      <a class="active" href="#">ES</a>
+      <a href="index-en.html">EN</a>
+    </div>
   </div>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Fundación Legis",
-  "url": "https://www.fundacionlegis.org",
-  "logo": "https://www.fundacionlegis.org/assets/logo.png",
-  "description": "Fundación Legis trabaja en programas de reinserción social y protección de la infancia.",
-  "sameAs": [
-    "https://www.linkedin.com/tu-perfil",
-    "https://twitter.com/tu-perfil"
-  ]
-}
-</script>
-
 </header>
+
 <div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
 <!-- HERO -->
 <section class="hero">
   <picture>
-    <img src="img/fotoportada.jpg" alt="Portada Fundación Legis">
+    <img src="img/fotoportada.jpg" alt="Portada Fundación Legis, esperanza y futuro">
   </picture>
   <div class="hero-slogan">
-    <!-- 🔹 Color del texto restaurado a blanco -->
     <h1 style="color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.45);">
       Sembramos esperanza<br>para cosechar futuro
     </h1>
@@ -59,30 +72,35 @@
   </div>
 </section>
 
+<!-- MAIN -->
 <main class="container">
   <!-- Proyectos -->
   <section id="proyectos" class="section" style="text-align:center;">
     <h2>Nuestros proyectos</h2>
     <p class="lead">Dos líneas de actuación para transformar vidas.</p>
-    <p style="margin-top:8px;">DOS PROYECTOS, UNA VISIÓN; SEMBRAR ESPERANZA PARA COSECHAR UN FUTURO MÁS JUSTO PARA TODOS.</p>
+    <p style="margin-top:8px;">DOS PROYECTOS, UNA VISIÓN: sembrar esperanza para cosechar un futuro más justo para todos.</p>
 
     <div class="cards" style="margin-top:22px;">
       <article class="card">
-        <img src="img/asistenciapenitenciaria.png" alt="Asistencia Prisiones (PAP)">
+        <img src="img/asistenciapenitenciaria.png" alt="Proyecto Asistencia Penitenciaria Fundación Legis">
         <div class="card-body">
           <h3>Proyecto Asistencia Prisiones (PAP)</h3>
           <p>Brindamos apoyo jurídico y humano durante el cumplimiento de la pena; sembramos esperanza cuando más se necesita.</p>
         </div>
-        <div class="card-actions"><a class="btn btn-primary" href="asistencia-penitenciaria.html">Conoce más</a></div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="asistencia-penitenciaria.html">Conoce más</a>
+        </div>
       </article>
 
       <article class="card">
-        <img src="img/ayudainfancia.png" alt="Asistencia Menores (PAM)">
+        <img src="img/ayudainfancia.png" alt="Proyecto de ayuda a la infancia Fundación Legis">
         <div class="card-body">
           <h3>Proyecto Asistencia Menores (PAM)</h3>
           <p>Protección y apoyo a madres y bebés recién nacidos para sembrar vida y futuro, porque cada ser humano merece un comienzo digno.</p>
         </div>
-        <div class="card-actions"><a class="btn btn-primary" href="proteccion-infancia.html">Conoce más</a></div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="proteccion-infancia.html">Conoce más</a>
+        </div>
       </article>
     </div>
   </section>
@@ -97,14 +115,31 @@
     </div>
   </section>
 
-  <!-- Colaboradoras -->
+  <!-- Empresas colaboradoras -->
   <section class="section">
     <h2 style="text-align:center;">Empresas colaboradoras</h2>
-    <p style="text-align:center;max-width:720px;margin:0 auto 18px;">En este lugar meteremos los logos de las empresas que colaboren.</p>
-    <div class="collaborators empty-state"><span>Aquí aparecerán las empresas colaboradoras</span></div>
+    <p style="text-align:center;max-width:720px;margin:0 auto 18px;">
+      En este lugar aparecerán los logos de las empresas que colaboran con la Fundación Legis.
+    </p>
+    <div class="collaborators empty-state">
+      <span>Aquí aparecerán las empresas colaboradoras</span>
+    </div>
+  </section>
+
+  <!-- Bloque SEO interno -->
+  <section class="seo-links" style="text-align:center;margin-top:40px;">
+    <p>
+      Conoce más sobre nuestra labor en 
+      <a href="que-hacemos.html">qué hacemos</a>, 
+      nuestro equipo en 
+      <a href="quienes-somos.html">quiénes somos</a> 
+      y cómo puedes 
+      <a href="colabora.html">colaborar con la Fundación Legis</a>.
+    </p>
   </section>
 </main>
 
+<!-- Footer -->
 <footer>
   © 2025 Fundación Legis ·
   <a href="aviso-legal.html">Aviso legal</a> ·
@@ -121,6 +156,7 @@
   </div>
 </div>
 
+<!-- Scripts -->
 <script src="js/main.js"></script>
 <script>
   // Mostrar popup una vez por sesión
@@ -134,7 +170,7 @@
     });
   });
 </script>
+
 </body>
 </html>
-
 
