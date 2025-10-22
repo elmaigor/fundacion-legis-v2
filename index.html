@@ -10,7 +10,7 @@
 
 <body>
 
-<!-- HEADER -->
+<!-- ===== HEADER ===== -->
 <header>
   <div class="header-inner">
     <a class="logo" href="index.html">
@@ -22,7 +22,7 @@
       <span></span><span></span><span></span>
     </button>
 
-    <!-- Navegación -->
+    <!-- Menú principal -->
     <nav>
       <ul id="main-menu">
         <li><a class="active" href="index.html">Inicio</a></li>
@@ -32,7 +32,7 @@
       </ul>
     </nav>
 
-    <!-- Idiomas -->
+    <!-- Selector de idioma -->
     <div class="lang-switch">
       <a class="active" href="#">ES</a>
       <a href="index-en.html">EN</a>
@@ -40,7 +40,7 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 <section class="hero">
   <picture>
     <img src="img/fotoportada.jpg" alt="Portada Fundación Legis">
@@ -54,7 +54,7 @@
   </div>
 </section>
 
-<!-- CONTENIDO PRINCIPAL -->
+<!-- ===== CONTENIDO PRINCIPAL ===== -->
 <main class="container">
   <section id="proyectos" class="section" style="text-align:center;">
     <h2>Nuestros proyectos</h2>
@@ -82,6 +82,7 @@
     </div>
   </section>
 
+  <!-- Empresas impulsoras -->
   <section class="section" id="impulsoras">
     <h2 style="text-align:center;">Empresas impulsoras</h2>
     <div class="partners">
@@ -91,6 +92,7 @@
     </div>
   </section>
 
+  <!-- Colaboradoras -->
   <section class="section">
     <h2 style="text-align:center;">Empresas colaboradoras</h2>
     <p style="text-align:center;max-width:720px;margin:0 auto 18px;">En este lugar meteremos los logos de las empresas que colaboren.</p>
@@ -98,6 +100,7 @@
   </section>
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   © 2025 Fundación Legis ·
   <a href="aviso-legal.html">Aviso legal</a> ·
@@ -106,7 +109,7 @@
   <a href="transparencia.html">Transparencia</a>
 </footer>
 
-<!-- POPUP GALA -->
+<!-- ===== POPUP GALA ===== -->
 <div id="popup-gala" class="popup-gala">
   <div class="popup-content">
     <button id="close-popup" aria-label="Cerrar">×</button>
@@ -114,15 +117,22 @@
   </div>
 </div>
 
+<!-- ===== SCRIPTS ===== -->
 <script src="js/main.js"></script>
 <script>
 window.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('popup-gala');
+  const closeBtn = document.getElementById('close-popup');
+
+  // Mostrar una sola vez por sesión
   if (!sessionStorage.getItem('popupShown')) {
-    document.getElementById('popup-gala').classList.add('active');
-    sessionStorage.setItem('popupShown','true');
+    popup.classList.add('active');
+    sessionStorage.setItem('popupShown', 'true');
   }
-  document.getElementById('close-popup').addEventListener('click', () => {
-    document.getElementById('popup-gala').classList.remove('active');
+
+  // Cerrar popup
+  closeBtn.addEventListener('click', () => {
+    popup.classList.remove('active');
   });
 });
 </script>
