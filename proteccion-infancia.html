@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fundación Legis · Proyecto Protección a la Infancia</title>
+  <title>Fundación Legis · Protección a la Infancia</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
+
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <a class="logo" href="index.html">
+      <img src="img/logo.jpg" alt="Fundación Legis" />
+    </a>
+
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Inicio</a></li>
@@ -23,41 +29,59 @@
         <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
+
     <div class="lang-switch">
       <a class="active" href="#">ES</a>
       <a href="proteccion-infancia-en.html">EN</a>
     </div>
   </div>
 </header>
-<div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
+<!-- ===== CONTENIDO ===== -->
 <main class="container">
   <section class="section">
-    <h2>Proyecto Asistencia Menores (PAM)</h2>
-    <p>Sembramos protección, cuidados y apoyo a mamás embarazadas y niños recién nacidos para cosechar vida.</p>
-    <p>Nuestro primer proyecto está situado en una zona rural remota de Bangladesh, un país con uno de los índices de pobreza más altos del mundo. De la mano de Compassion apoyamos un programa que ofrece un entorno seguro para mamás embarazadas y bebés recién nacidos, evitando muertes por falta de atención médica o condiciones precarias.</p>
+    <h2>Proyecto Asistencia a Menores (PAM)</h2>
+    <p class="lead">
+      Sembramos protección, cuidados y apoyo a mamás embarazadas y niños recién nacidos para cosechar vida.
+      Nuestro compromiso es acompañarles desde el inicio, garantizando una atención médica, emocional y humana digna.
+    </p>
   </section>
 
-  <div class="cards">
-    <article class="card">
-      <img src="img/proyecto-bangladesh.jpg" alt="Proyecto Bangladesh">
-      <div class="card-body">
-        <h3>Proyecto Bangladesh</h3>
-        <p>Ofrecemos acompañamiento y apoyo a madres y bebés para asegurar un nacimiento y desarrollo dignos, con atención médica y recursos básicos garantizados.</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="img/apadrina.jpg" alt="Apadrina un niño">
-      <div class="card-body">
-        <h3>Apadrina un niño</h3>
-        <p>Con tu ayuda puedes transformar vidas. Apadrina un niño junto a Compassion y siembra esperanza para el futuro.</p>
-        <div class="card-actions">
-          <a class="btn btn-primary" href="https://www.compassion.es/apadrinar-un-nino.php" target="_blank">Apadrinar</a>
+  <section class="section" style="text-align:center;">
+    <div class="cards">
+      
+      <!-- Proyecto Bangladesh -->
+      <article class="card">
+        <img src="img/proyecto-bangladesh.jpg" alt="Proyecto Materno-Infantil en Bangladesh">
+        <div class="card-body">
+          <h3>Proyecto Materno-Infantil en Bangladesh</h3>
+          <p>
+            Apoyamos un programa de intervención materno-infantil en comunidades vulnerables de Bangladesh,
+            que ofrece atención médica, alimentación adecuada y formación a madres embarazadas y bebés recién nacidos.
+          </p>
         </div>
-      </div>
-    </article>
-  </div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="proyecto-bangladesh.html">Ver información completa</a>
+        </div>
+      </article>
+
+      <!-- Proyecto Apadrinamiento -->
+      <article class="card">
+        <img src="img/proyecto-apadrina.jpg" alt="Proyecto Apadrina un Niño">
+        <div class="card-body">
+          <h3>Proyecto Apadrina un Niño</h3>
+          <p>
+            A través de nuestra colaboración con Compassion, puedes apadrinar a un niño y transformar su vida.
+            Tu apoyo garantiza educación, alimentación y esperanza para su futuro.
+          </p>
+        </div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="https://www.compassion.es/apadrinar-un-nino.php" target="_blank">Apadrina</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -71,7 +95,6 @@
 <script src="js/main.js"></script>
 </body>
 </html>
-
 
 
 
