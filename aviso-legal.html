@@ -1,27 +1,79 @@
-<!DOCTYPE html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Aviso legal · Fundación Legis</title><link rel='stylesheet' href='css/style.css'></head><body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Aviso legal · Fundación Legis</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg"/>
+</head>
+<body>
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis"/></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="que-hacemos.html" >Qué hacemos</a></li>
-        <li><a href="quienes-somos.html" >Quiénes somos</a></li>
-        <li><a href="colabora.html" class="btn-colabora" >Colabora</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="que-hacemos.html">Qué hacemos</a></li>
+        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+        <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch">
-      <a href="#" class="active">ES</a>
-      <a href="index-en.html" >EN</a>
-    </div>
-    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <div class="lang-switch"><a class="active" href="#">ES</a></div>
   </div>
-</header><main class='section'><h2>Aviso legal</h2><p>Contenido legal pendiente de aportar por la fundación.</p></main>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h1>Aviso legal</h1>
+    <p>Este sitio web es titularidad de <strong>Fundación Legis</strong> (en adelante, “la Fundación”). El acceso y uso del sitio implican la aceptación de los términos de este Aviso Legal y de la normativa aplicable.</p>
+  </section>
+
+  <section class="section">
+    <h2>1. Datos identificativos</h2>
+    <p><strong>Titular:</strong> Fundación Legis<br>
+       <strong>Domicilio:</strong> Asturias (España) <!-- añade dirección completa si procede --><br>
+       <strong>Email:</strong> <a href="mailto:info@fundacionlegis.org">info@fundacionlegis.org</a><br>
+       <!-- Si procede: CIF/NIF y datos registrales de la fundación -->
+    </p>
+    <p>La información de esta sección se publica en cumplimiento del art. 10 de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico. </p>
+  </section>
+
+  <section class="section">
+    <h2>2. Condiciones de uso</h2>
+    <p>El usuario se compromete a realizar un uso adecuado del sitio y a no emplearlo para conductas contrarias a la ley, la moral o el orden público. La Fundación puede denegar o retirar el acceso si detecta usos contrarios a estas condiciones.</p>
+  </section>
+
+  <section class="section">
+    <h2>3. Propiedad intelectual e industrial</h2>
+    <p>Los contenidos de este sitio (textos, imágenes, logotipos, diseño, código, etc.) son titularidad de la Fundación o de terceros con licencia. Queda prohibida su reproducción, distribución o comunicación pública salvo autorización expresa o amparo legal.</p>
+  </section>
+
+  <section class="section">
+    <h2>4. Enlaces</h2>
+    <p>Este sitio puede contener enlaces a páginas de terceros sobre las que la Fundación no ejerce control ni responde de sus contenidos o políticas.</p>
+  </section>
+
+  <section class="section">
+    <h2>5. Responsabilidad</h2>
+    <p>La Fundación no garantiza la continuidad del servicio ni la ausencia de errores, si bien realizará esfuerzos razonables para mantener el sitio disponible y seguro. El uso de la información del sitio se realiza por cuenta y riesgo del usuario.</p>
+  </section>
+
+  <section class="section">
+    <h2>6. Legislación y jurisdicción</h2>
+    <p>Este Aviso Legal se rige por la legislación española. Salvo norma imperativa en contrario (por ejemplo, consumidores), las partes se someten a los juzgados de la ciudad del domicilio de la Fundación.</p>
+  </section>
+</main>
+
 <footer>
-  <div class="footer-inner">
-    <p>© 2025 Fundación Legis · <a href="aviso-legal.html">Aviso legal</a> · 
-    <a href="politica-cookies.html">Cookies</a> · 
-    <a href="privacidad.html">Privacidad</a> · 
-    <a href="transparencia.html">Transparencia</a></p>
-  </div>
-</footer><script src='js/main.js'></script></body></html>
+  © 2025 Fundación Legis ·
+  <a href="aviso-legal.html" class="active">Aviso legal</a> ·
+  <a href="cookies-policy.html">Cookies</a> ·
+  <a href="privacidad.html">Privacidad</a> ·
+  <a href="transparencia.html">Transparencia</a>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
