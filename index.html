@@ -7,22 +7,13 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
-
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- Header común -->
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html">
-      <img src="img/logo.jpg" alt="Fundación Legis" />
-    </a>
-
-    <!-- Botón hamburguesa -->
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <!-- Menú principal -->
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
         <li><a class="active" href="index.html">Inicio</a></li>
@@ -31,22 +22,21 @@
         <li><a class="btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-
-    <!-- Selector de idioma -->
-    <div class="lang-switch">
-      <a class="active" href="#">ES</a>
-      <a href="index-en.html">EN</a>
-    </div>
+    <div class="lang-switch"><a class="active" href="#">ES</a><a href="index-en.html">EN</a></div>
   </div>
 </header>
+<div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero">
   <picture>
     <img src="img/fotoportada.jpg" alt="Portada Fundación Legis">
   </picture>
   <div class="hero-slogan">
-    <h1>Sembramos esperanza<br>para cosechar futuro</h1>
+    <!-- 🔹 Color del texto restaurado a blanco -->
+    <h1 style="color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.45);">
+      Sembramos esperanza<br>para cosechar futuro
+    </h1>
     <div class="hero-actions">
       <a class="btn btn-primary" href="colabora.html">Haz tu aportación</a>
       <a class="btn btn-link" href="#proyectos">Conoce nuestros proyectos</a>
@@ -54,8 +44,8 @@
   </div>
 </section>
 
-<!-- ===== CONTENIDO PRINCIPAL ===== -->
 <main class="container">
+  <!-- Proyectos -->
   <section id="proyectos" class="section" style="text-align:center;">
     <h2>Nuestros proyectos</h2>
     <p class="lead">Dos líneas de actuación para transformar vidas.</p>
@@ -86,9 +76,9 @@
   <section class="section" id="impulsoras">
     <h2 style="text-align:center;">Empresas impulsoras</h2>
     <div class="partners">
-      <a href="https://voxlegis.es/" target="_blank"><img src="img/logo-voxlegis.jpg" alt="Vox Legis Abogados"></a>
-      <a href="#"><img src="img/logo-legisinvestment.jpg" alt="Legis Investment"></a>
-      <a href="#"><img src="img/logo-ethica.jpg" alt="Éthica Consultoría Penal"></a>
+      <a href="https://voxlegis.es/" target="_blank" rel="noopener"><img src="img/logo-voxlegis.jpg" alt="Vox Legis Abogados"></a>
+      <a href="#" target="_blank" rel="noopener"><img src="img/logo-legisinvestment.jpg" alt="Legis Investment"></a>
+      <a href="#" target="_blank" rel="noopener"><img src="img/logo-ethica.jpg" alt="Éthica Consultoría Penal"></a>
     </div>
   </section>
 
@@ -100,7 +90,6 @@
   </section>
 </main>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   © 2025 Fundación Legis ·
   <a href="aviso-legal.html">Aviso legal</a> ·
@@ -109,7 +98,7 @@
   <a href="transparencia.html">Transparencia</a>
 </footer>
 
-<!-- ===== POPUP GALA ===== -->
+<!-- Popup Gala -->
 <div id="popup-gala" class="popup-gala">
   <div class="popup-content">
     <button id="close-popup" aria-label="Cerrar">×</button>
@@ -117,28 +106,20 @@
   </div>
 </div>
 
-<!-- ===== SCRIPTS ===== -->
 <script src="js/main.js"></script>
 <script>
-window.addEventListener('DOMContentLoaded', () => {
-  const popup = document.getElementById('popup-gala');
-  const closeBtn = document.getElementById('close-popup');
-
-  // Mostrar una sola vez por sesión
-  if (!sessionStorage.getItem('popupShown')) {
-    popup.classList.add('active');
-    sessionStorage.setItem('popupShown', 'true');
-  }
-
-  // Cerrar popup
-  closeBtn.addEventListener('click', () => {
-    popup.classList.remove('active');
+  // Mostrar popup una vez por sesión
+  window.addEventListener('DOMContentLoaded', () => {
+    if (!sessionStorage.getItem('popupShown')) {
+      document.getElementById('popup-gala').classList.add('active');
+      sessionStorage.setItem('popupShown','true');
+    }
+    document.getElementById('close-popup').addEventListener('click', () => {
+      document.getElementById('popup-gala').classList.remove('active');
+    });
   });
-});
 </script>
-
 </body>
 </html>
-
 
 
