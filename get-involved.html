@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fundación Legis · Get Involved</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
+  <style>
+    /* Inline style only for Read More interaction */
+    #more { display: none; }
+    #readMoreBtn {
+      background: none;
+      border: none;
+      color: var(--granate);
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+      margin-left: 4px;
+    }
+    #readMoreBtn:hover { color: var(--dorado); }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="index-en.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav>
+      <ul id="main-menu">
+        <li><a href="index-en.html">Home</a></li>
+        <li><a href="what-we-do.html">What We Do</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a class="btn-colabora active" href="get-involved.html">Get Involved</a></li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <a href="colabora.html">ES</a>
+      <a class="active" href="#">EN</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== CONTENT ===== -->
+<main class="container">
+  <section class="section">
+    <h2>Get Involved</h2>
+    <p class="lead">
+      With your help we can sow more seeds and harvest more fruits.  
+      The impact of each project depends on you.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Tax Benefits</h2>
+    <p>
+      When you donate to Fundación Legis, your contribution entitles you to tax deductions under Spanish law.
+      The first €250 donated per year can be deducted at <strong>80%</strong> in your personal income tax return.
+      <span id="dots">...</span><span id="more">
+      Beyond this amount, the deduction rate is <strong>40%</strong> (or <strong>45%</strong> if you have been donating
+      to the same foundation for at least three consecutive years).
+      Legal entities (companies) can deduct <strong>35%</strong> of the donation, or <strong>40%</strong> if they maintain
+      recurring support.
+      <br><br>
+      These benefits are established by the Spanish Law 49/2002 on the tax regime for non-profit entities and
+      tax incentives for patronage.
+      We will send you a donation certificate at the end of the fiscal year so you can include it in your tax return.
+      </span>
+      <button id="readMoreBtn">Read more</button>
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Bank Account for Contributions</h2>
+    <p>
+      Entity: <strong>Caixabank</strong><br>
+      Account number: <strong>ES86 2100 3154 1222 0026 8766</strong>
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Volunteering</h2>
+    <p>
+      Are you a legal professional? Do you share our values and want to dedicate some of your time and knowledge
+      to helping others? Join us — we need you.
+    </p>
+    <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Contact us</a>
+  </section>
+
+  <section class="section">
+    <h2>Donations</h2>
+    <p>
+      Your contribution is a seed of hope for someone.  
+      Together we can transform more lives.
+    </p>
+    <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Make a donation</a>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2025 Fundación Legis ·
+  <a href="legal-notice.html">Legal Notice</a> ·
+  <a href="cookies-policy-en.html">Cookies</a> ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="transparency.html">Transparency</a>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Toggle read more section
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("readMoreBtn");
+    const dots = document.getElementById("dots");
+    const more = document.getElementById("more");
+
+    btn.addEventListener("click", () => {
+      const visible = dots.style.display === "none";
+      dots.style.display = visible ? "inline" : "none";
+      more.style.display = visible ? "none" : "inline";
+      btn.textContent = visible ? "Read more" : "Show less";
+    });
+  });
+</script>
+
+</body>
+</html>
