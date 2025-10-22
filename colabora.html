@@ -7,56 +7,92 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
+
 <body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="header-inner">
-    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <a class="logo" href="index.html">
+      <img src="img/logo.jpg" alt="Fundación Legis" />
+    </a>
+
+    <!-- Menú hamburguesa -->
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+
+    <!-- Navegación -->
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="que-hacemos.html">Qué hacemos</a></li>
         <li><a href="quienes-somos.html">Quiénes somos</a></li>
-        <li><a class="btn-colabora active" href="colabora.html">Colabora</a></li>
+        <li><a class="active btn-colabora" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
+
+    <!-- Idiomas -->
     <div class="lang-switch">
       <a class="active" href="#">ES</a>
       <a href="colabora-en.html">EN</a>
     </div>
   </div>
 </header>
-<div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
+<!-- ===== CONTENIDO ===== -->
 <main class="container">
   <section class="section">
-    <h2>Colabora con nosotros</h2>
-    <p>Con tu ayuda podemos sembrar más semillas y cosechar más frutos. El impacto de cada proyecto depende de ti.</p>
+    <h2>Colabora con Fundación Legis</h2>
+    <p class="lead">
+      Con tu ayuda podemos sembrar más semillas y cosechar más frutos.  
+      El impacto de cada proyecto depende de ti.
+    </p>
+  </section>
 
-    <div class="grid-2" style="margin-top:24px;">
-      <div>
-        <h3>Haz una donación</h3>
-        <p><strong>Entidad:</strong> Caixabank</p>
-        <p><strong>Nº de cuenta:</strong> ES86 2100 3154 1222 0026 8766</p>
-        <p>Tu aportación es una semilla de esperanza. Gracias a ti podremos seguir ayudando a quienes más lo necesitan.</p>
-      </div>
-      <div>
-        <h3>Beneficios fiscales</h3>
-        <p>Las donaciones a Fundación Legis disfrutan de deducciones fiscales según la legislación vigente, similar a las de organizaciones colaboradoras como Compassion.</p>
-      </div>
-    </div>
+  <!-- ===== Beneficios fiscales ===== -->
+  <section id="beneficios" class="section">
+    <h2>Beneficios fiscales</h2>
+    <p>
+      El 1 de enero de 2024 entró en vigor la nueva Ley de Mecenazgo que incrementa los incentivos fiscales al mecenazgo.  
+      Ahora la deducción del 80 % de tu donativo se aplica sobre los primeros 250 €, y a partir de esa cantidad se aplica un 40 %.
+    </p>
+    <p>
+      <a href="https://www.compassion.es/beneficios-fiscales/" target="_blank" class="btn btn-link">
+        Leer más
+      </a>
+    </p>
+  </section>
 
-    <div class="section" style="text-align:center;margin-top:40px;">
-      <h3>¿Quieres participar como voluntario?</h3>
-      <p>Si eres jurista o compartes nuestra visión, súmate. Te necesitamos.</p>
-      <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Contactar</a>
-    </div>
+  <!-- ===== Donaciones ===== -->
+  <section class="section">
+    <h2>Haz tu aportación</h2>
+    <p>Puedes realizar tu donativo mediante transferencia bancaria:</p>
+    <p><strong>Entidad:</strong> Caixabank<br>
+       <strong>Nº de cuenta:</strong> ES86 2100 3154 1222 0026 8766</p>
+  </section>
+
+  <!-- ===== Voluntariado ===== -->
+  <section class="section">
+    <h2>Voluntariado</h2>
+    <p>
+      Si eres jurista y crees en nuestro proyecto, puedes ayudarnos con tu tiempo y tus conocimientos.  
+      Súmate, ¡te necesitamos!
+    </p>
+  </section>
+
+  <!-- ===== Contacto ===== -->
+  <section class="section">
+    <h2>Contacto para donaciones o colaboración</h2>
+    <p>
+      Puedes escribirnos directamente a:  
+      <strong><a href="mailto:info@fundacionlegis.org">info@fundacionlegis.org</a></strong>
+    </p>
+    <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Contactar</a>
   </section>
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   © 2025 Fundación Legis ·
   <a href="aviso-legal.html">Aviso legal</a> ·
@@ -65,7 +101,33 @@
   <a href="transparencia.html">Transparencia</a>
 </footer>
 
+<!-- ===== POPUP GALA ===== -->
+<div id="popup-gala" class="popup-gala">
+  <div class="popup-content">
+    <button id="close-popup" aria-label="Cerrar">×</button>
+    <img src="img/evento-inauguracion.png" alt="Cena de Gala Benéfica Fundación Legis">
+  </div>
+</div>
+
+<!-- ===== SCRIPTS ===== -->
 <script src="js/main.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const popup = document.getElementById('popup-gala');
+  const closeBtn = document.getElementById('close-popup');
+
+  // Mostrar solo una vez por sesión
+  if (!sessionStorage.getItem('popupShown')) {
+    popup.classList.add('active');
+    sessionStorage.setItem('popupShown', 'true');
+  }
+
+  // Cerrar popup
+  closeBtn.addEventListener('click', () => {
+    popup.classList.remove('active');
+  });
+});
+</script>
+
 </body>
 </html>
-
