@@ -6,6 +6,30 @@
   <title>Fundación Legis · Colabora</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
+  <style>
+    /* Ajuste de espaciado entre secciones */
+    .section { padding: 30px 0 20px; }
+
+    /* Texto ampliable */
+    #beneficios .extra {
+      display: none;
+      margin-top: 10px;
+    }
+    #beneficios.expanded .extra {
+      display: block;
+      animation: fadeIn .4s ease;
+    }
+    #beneficios .btn-toggle {
+      color: var(--granate);
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -17,12 +41,10 @@
       <img src="img/logo.jpg" alt="Fundación Legis" />
     </a>
 
-    <!-- Menú hamburguesa -->
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
-    <!-- Navegación -->
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Inicio</a></li>
@@ -32,7 +54,6 @@
       </ul>
     </nav>
 
-    <!-- Idiomas -->
     <div class="lang-switch">
       <a class="active" href="#">ES</a>
       <a href="colabora-en.html">EN</a>
@@ -54,14 +75,17 @@
   <section id="beneficios" class="section">
     <h2>Beneficios fiscales</h2>
     <p>
-      El 1 de enero de 2024 entró en vigor la nueva Ley de Mecenazgo que incrementa los incentivos fiscales al mecenazgo.  
-      Ahora la deducción del 80 % de tu donativo se aplica sobre los primeros 250 €, y a partir de esa cantidad se aplica un 40 %.
+      El 1 de enero de 2024 entró en vigor la nueva Ley de Mecenazgo, que mejora las deducciones fiscales para quienes colaboran con entidades sin ánimo de lucro.  
+      Ahora puedes recuperar hasta un 80 % de tu aportación.
     </p>
-    <p>
-      <a href="https://www.compassion.es/beneficios-fiscales/" target="_blank" class="btn btn-link">
-        Leer más
-      </a>
-    </p>
+
+    <div class="extra">
+      <p>Los primeros 250 € donados durante el año desgravan un 80 %. A partir de esa cantidad, la deducción asciende al 40 %, que puede incrementarse al 45 % si mantienes o aumentas tus donaciones durante al menos 3 años consecutivos a la misma entidad.</p>
+      <p>En el caso de personas jurídicas (empresas), la deducción general es del 40 % y puede alcanzar el 50 % en fidelidad. Esto significa que tanto particulares como empresas pueden colaborar con impacto real y una importante ventaja fiscal.</p>
+      <p>Recibirás un certificado anual para incluir tu donativo en la declaración del IRPF o IS. La Fundación Legis, como entidad sin ánimo de lucro acogida al régimen fiscal de la Ley 49/2002, emite estos justificantes conforme a la normativa vigente.</p>
+    </div>
+
+    <button class="btn-toggle" id="toggle-beneficios">Leer más</button>
   </section>
 
   <!-- ===== Donaciones ===== -->
@@ -112,22 +136,25 @@
 <!-- ===== SCRIPTS ===== -->
 <script src="js/main.js"></script>
 <script>
-window.addEventListener('DOMContentLoaded', () => {
-  const popup = document.getElementById('popup-gala');
-  const closeBtn = document.getElementById('close-popup');
-
-  // Mostrar solo una vez por sesión
-  if (!sessionStorage.getItem('popupShown')) {
-    popup.classList.add('active');
-    sessionStorage.setItem('popupShown', 'true');
-  }
-
-  // Cerrar popup
-  closeBtn.addEventListener('click', () => {
-    popup.classList.remove('active');
+  // Mostrar popup una vez por sesión
+  window.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('popup-gala');
+    const closeBtn = document.getElementById('close-popup');
+    if (!sessionStorage.getItem('popupShown')) {
+      popup.classList.add('active');
+      sessionStorage.setItem('popupShown','true');
+    }
+    closeBtn.addEventListener('click', () => popup.classList.remove('active'));
   });
-});
+
+  // Mostrar / ocultar texto extendido de beneficios
+  document.getElementById('toggle-beneficios').addEventListener('click', function() {
+    const section = document.getElementById('beneficios');
+    section.classList.toggle('expanded');
+    this.textContent = section.classList.contains('expanded') ? 'Leer menos' : 'Leer más';
+  });
 </script>
 
 </body>
 </html>
+
