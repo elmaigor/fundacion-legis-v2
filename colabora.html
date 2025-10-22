@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Colabora · Fundación Legis</title>
+  <title>Fundación Legis · Colabora</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
 </head>
@@ -12,7 +12,9 @@
 <header>
   <div class="header-inner">
     <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <nav>
       <ul id="main-menu">
         <li><a href="index.html">Inicio</a></li>
@@ -21,50 +23,36 @@
         <li><a class="btn-colabora active" href="colabora.html">Colabora</a></li>
       </ul>
     </nav>
-    <div class="lang-switch"><a class="active" href="#">ES</a><a href="collaborate.html">EN</a></div>
+    <div class="lang-switch">
+      <a class="active" href="#">ES</a>
+      <a href="colabora-en.html">EN</a>
+    </div>
   </div>
 </header>
 <div id="backdrop" class="backdrop" aria-hidden="true"></div>
 
 <main class="container">
-  <section class="section" style="text-align:center;">
-    <h1>Colabora</h1>
-    <p class="lead">Con tu ayuda podemos sembrar más semillas y cosechar más frutos. El impacto de cada proyecto depende de ti.</p>
-  </section>
-
   <section class="section">
-    <div class="cards">
-      <article class="card">
-        <img src="img/ayudainfancia.png" alt="Donación">
-        <div class="card-body">
-          <h3>Haz una donación</h3>
-          <p>Puedes contribuir al proyecto que más te motive o dejar que asignemos tu donación donde más se necesita.</p>
-          <p><strong>Caixabank</strong><br>ES86 2100 3154 1222 0026 8766</p>
-          <p><small>Tu donación tiene beneficios fiscales conforme a la ley vigente.</small></p>
-        </div>
-        <div class="card-actions"><a class="btn btn-primary" href="#beneficios">Ver beneficios fiscales</a></div>
-      </article>
+    <h2>Colabora con nosotros</h2>
+    <p>Con tu ayuda podemos sembrar más semillas y cosechar más frutos. El impacto de cada proyecto depende de ti.</p>
 
-      <article class="card">
-        <img src="img/asistenciaprisiones.png" alt="Voluntariado">
-        <div class="card-body">
-          <h3>Voluntariado (juristas)</h3>
-          <p>¿Eres jurista y quieres aportar tu tiempo y experiencia? Súmate al equipo del PAP y ayúdanos a acompañar y defender derechos.</p>
-          <p><small>Escríbenos a <a href="mailto:info@fundacionlegis.org">info@fundacionlegis.org</a></small></p>
-        </div>
-        <div class="card-actions"><a class="btn btn-primary" href="asistencia-penitenciaria.html">Conoce el PAP</a></div>
-      </article>
+    <div class="grid-2" style="margin-top:24px;">
+      <div>
+        <h3>Haz una donación</h3>
+        <p><strong>Entidad:</strong> Caixabank</p>
+        <p><strong>Nº de cuenta:</strong> ES86 2100 3154 1222 0026 8766</p>
+        <p>Tu aportación es una semilla de esperanza. Gracias a ti podremos seguir ayudando a quienes más lo necesitan.</p>
+      </div>
+      <div>
+        <h3>Beneficios fiscales</h3>
+        <p>Las donaciones a Fundación Legis disfrutan de deducciones fiscales según la legislación vigente, similar a las de organizaciones colaboradoras como Compassion.</p>
+      </div>
     </div>
-  </section>
 
-  <section id="beneficios" class="section">
-    <h2 style="text-align:center;">Beneficios fiscales</h2>
-    <p style="text-align:center;max-width:800px;margin:0 auto 18px;">
-      Las donaciones a entidades sin ánimo de lucro disfrutan de deducciones fiscales. Solicita tu certificado de donación para tu declaración.
-    </p>
-    <div class="cards">
-      <article class="card"><div class="card-body"><h3>Personas físicas (IRPF)</h3><p>Los primeros 150 € donados al año disfrutan de un tipo de deducción mayor. A partir de esa cantidad, la deducción continúa con un porcentaje reducido.</p></div></article>
-      <article class="card"><div class="card-body"><h3>Personas jurídicas (IS)</h3><p>Las empresas pueden deducir un porcentaje de sus donaciones sobre la cuota íntegra del Impuesto sobre Sociedades, conforme a la ley aplicable.</p></div></article>
+    <div class="section" style="text-align:center;margin-top:40px;">
+      <h3>¿Quieres participar como voluntario?</h3>
+      <p>Si eres jurista o compartes nuestra visión, súmate. Te necesitamos.</p>
+      <a class="btn btn-primary" href="mailto:info@fundacionlegis.org">Contactar</a>
     </div>
   </section>
 </main>
