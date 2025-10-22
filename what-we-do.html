@@ -1,35 +1,88 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What we do · Fundación Legis</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"><link rel="stylesheet" href="css/style.css"></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fundación Legis · What We Do</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
+</head>
+<body>
 
+<!-- ===== HEADER ===== -->
 <header>
   <div class="header-inner">
-    <a class="logo" href="index-en.html"><img src="img/logo.jpg" alt="Fundación Legis"></a>
+    <a class="logo" href="index-en.html"><img src="img/logo.jpg" alt="Fundación Legis" /></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <ul id="main-menu">
-        <li><a href="index-en.html" >Home</a></li>
-        <li><a href="que-hacemos.html" class="active">What we do</a></li>
-        <li><a href="quienes-somos.html" >About us</a></li>
-        <li><a href="colabora.html" class="btn-colabora" >Collaborate</a></li>
+        <li><a href="index-en.html">Home</a></li>
+        <li><a class="active" href="what-we-do.html">What We Do</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a class="btn-colabora" href="get-involved.html">Get Involved</a></li>
       </ul>
     </nav>
     <div class="lang-switch">
-      <a href="index.html">ES</a>
-      <a href="index-en.html" >EN</a>
+      <a href="que-hacemos.html">ES</a>
+      <a class="active" href="#">EN</a>
     </div>
-    <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
   </div>
 </header>
-<main><section class="section"><h2>Our lines of action</h2>
-<div class="grid-2">
-  <article class="card"><img src="img/asistenciapenitenciaria.png" alt=""><div class="card-body"><h3>Prison Assistance</h3><p>Acompañamos con asesoramiento legal, programas en prisión y apoyo a familias.</p><a class="btn btn-white" href="penitentiary-assistance.html">Learn more</a></div></article>
-  <article class="card"><img src="img/ayudainfancia.png" alt=""><div class="card-body"><h3>Child Protection</h3><p>Puentes de futuro y apadrinamiento para transformar vidas desde la infancia.</p><a class="btn btn-white" href="childhood-protection.html">Learn more</a></div></article>
-</div></section></main>
 
+<!-- ===== CONTENT ===== -->
+<main class="container">
+  <section class="section">
+    <h2>What We Do</h2>
+    <p class="lead">
+      At Fundación Legis we sow hope to harvest the future through two different projects united by one
+      essential value: <strong>the dignity of the human being</strong>.
+    </p>
+  </section>
+
+  <section class="section" style="text-align:center;">
+    <div class="cards">
+      <!-- PAP -->
+      <article class="card">
+        <img src="img/asistenciaprisiones.png" alt="Prison Assistance Project (PAP)">
+        <div class="card-body">
+          <h3>Prison Assistance Project (PAP)</h3>
+          <p>
+            We provide pro bono legal aid and human support to people deprived of freedom,
+            helping them rebuild their lives and defending their fundamental rights.
+          </p>
+        </div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="prison-assistance.html">Learn more</a>
+        </div>
+      </article>
+
+      <!-- PAM -->
+      <article class="card">
+        <img src="img/ayudainfancia.png" alt="Child Assistance Project (PAM)">
+        <div class="card-body">
+          <h3>Child Assistance Project (PAM)</h3>
+          <p>
+            We support pregnant mothers and newborn babies in situations of extreme poverty.
+            Our goal is to offer protection, care and hope for life itself.
+          </p>
+        </div>
+        <div class="card-actions">
+          <a class="btn btn-primary" href="child-protection.html">Learn more</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
 <footer>
-  <div class="footer-inner">
-    <p>© 2025 Fundación Legis · <a href="legal-notice.html">Aviso legal</a> · 
-    <a href="cookies-policy.html">Cookies</a> · 
-    <a href="privacy-policy.html">Privacidad</a> · 
-    <a href="transparency.html">Transparencia</a></p>
-  </div>
-</footer><script src="js/main.js"></script></body></html>
+  © 2025 Fundación Legis ·
+  <a href="legal-notice.html">Legal Notice</a> ·
+  <a href="cookies-policy-en.html">Cookies</a> ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="transparency.html">Transparency</a>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
